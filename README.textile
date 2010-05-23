@@ -1,0 +1,8 @@
+h1. PROJdeLei
+
+
+h2. Road Map 0.1
+
+* Salvar proposições em um banco de dados
+* Adicionar novas fontes de dados
+* Otimizar o código existente
