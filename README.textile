@@ -1,21 +1,8 @@
-h1. Template Sinatra
-
-h2. Why?
-
-p. Because I do not will write code again
-
-h2. Install
-
-p. Clone the project with name of your app 
-@git clone git://github.com/emersonvinicius/sinatra-template.git my_app@
-
-p. Enter in folder of your app
-@cd my_app@
-
-p. Install Dependencies
-@bundle install@
-
-p. Init server
-@thin start@
+h1. PROJdeLei
 
 
+h2. Road Map 0.1
+
+* Salvar proposições em um banco de dados
+* Adicionar novas fontes de dados
+* Otimizar o código existente
