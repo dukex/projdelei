@@ -4,7 +4,7 @@ $format = empty($_GET['format']) ? 'json' : $_GET['format'];
 if($format == 'json'):
 	header("Content-type: application/{$format}");
 elseif($format == 'rss'):
-	header("Content-type: text/html");
+	header("Content-type: application/xml");
 endif;
 $ano = empty($_GET['param'])?date("Y"):str_replace("/",null,$_GET['param']);
 
