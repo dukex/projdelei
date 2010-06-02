@@ -7,7 +7,6 @@ elseif($format == 'rss'):
 	header("Content-type: application/xml");
 endif;
 $ano = empty($_GET['param'])?date("Y"):str_replace("/",null,$_GET['param']);
-
 $url  = "http://www.camara.gov.br/sileg/Prop_Lista.asp?";
 $url .= "Sigla=PL";
 $url .= "&Numero=";
@@ -41,7 +40,6 @@ if (!$data) {
 	exit;
 }
 $projeto = array();
-
 $json_data = json_decode($data, true);
 foreach($json_data['query']['results']['table']['tbody'] as $tbody):
 	$thead = $tbody['tr'][0];
@@ -67,8 +65,7 @@ $projetos = $projeto;
 if($format == "json"):
 	echo "{\"projetos\": ".json_encode($projetos)."}";
 elseif($format == "rss"):
-echo '<?xml version="1.0"?>';
-
+	echo '<?xml version="1.0"?>';
 ?>
 	<rss version="0.92">
 		<channel>
@@ -93,12 +90,8 @@ echo '<?xml version="1.0"?>';
 	</rss>
 
 <?php
-
 else:
 	include "ArrayToXml.php";
 	$data_ = new ArrayToXml();
 	echo $data_->toXml($projetos,"projetos");
-endif;
-
-
-
+endif;?>
