@@ -27,7 +27,6 @@ $url .= "&OrgaoOrigem=todos";
 $yql =  urlencode("select * from html where url=\"{$url}\" AND xpath='//html/body/div/div[3]/div/div/div/div/form/table'");
 
 $data_link = "http://query.yahooapis.com/v1/public/yql?q={$yql}&format=json&callback=";
-
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $data_link);
 curl_setopt($ch, CURLOPT_FAILONERROR, true);
@@ -43,26 +42,29 @@ if (!$data) {
 $projeto = array();
 
 $json_data = json_decode($data, true);
-foreach($json_data['query']['results']['table']['tbody'] as $tbody):
-	$thead = $tbody['tr'][0];
-	$content = $tbody['tr']['1'];
-	$id = empty($thead['td'][0]['input']['value'])?'ERROR-'.rand(1, 423223):explode(';',$thead['td'][0]['input']['value']);
-	$id = "id-".$id[0];
+$json_data = empty($json_data)?array():json_decode($data, true);
+if(!empty($json_data['query']['results']['table']['tbody'])):
+	foreach($json_data['query']['results']['table']['tbody'] as $tbody):
+		$thead = $tbody['tr'][0];
+		$content = $tbody['tr']['1'];
+		$id = empty($thead['td'][0]['input']['value'])?'ERROR-'.rand(1, 423223):explode(';',$thead['td'][0]['input']['value']);
+		$id = "id-".$id[0];
 	
-	$projeto[$id]['info']['proposicao'] = $thead['td'][0]['a']['content'];
-	$projeto[$id]['info']['link'] = 'http://www.camara.gov.br/sileg/'.$thead['td'][0]['a']['href'];
-	$projeto[$id]['info']['orgao'] = $thead['td'][1]['p'];
-	$projeto[$id]['info']['situacao'] = $thead['td'][2]['p'];
+		$projeto[$id]['info']['proposicao'] = $thead['td'][0]['a']['content'];
+		$projeto[$id]['info']['link'] = 'http://www.camara.gov.br/sileg/'.$thead['td'][0]['a']['href'];
+		$projeto[$id]['info']['orgao'] = $thead['td'][1]['p'];
+		$projeto[$id]['info']['situacao'] = $thead['td'][2]['p'];
 	
-	$projeto[$id]['info']['autor'] = $content['td'][1]['p'][0]['content'];
-	$projeto[$id]['content']['text'] = htmlspecialchars($content['td'][1]['p'][1]['content']);
-	if($format == "xml"):
-		$projeto[$id]['content']['text'] = "<![CDATA[".htmlspecialchars($projeto[$id]['content']['text'])."]]>";
-	endif;
-	
-	
-	$projeto[$id]['content']['despacho'] = empty($content['td'][1]['p'][2])?null:htmlspecialchars($content['td'][1]['p'][2]);
-endforeach;
+		$projeto[$id]['info']['autor'] = $content['td'][1]['p'][0]['content'];
+		$projeto[$id]['content']['text'] = htmlspecialchars($content['td'][1]['p'][1]['content']);
+		if($format == "xml"):
+			$projeto[$id]['content']['text'] = "<![CDATA[".htmlspecialchars($projeto[$id]['content']['text'])."]]>";
+		endif;
+		$projeto[$id]['content']['despacho'] = empty($content['td'][1]['p'][2])?null:htmlspecialchars($content['td'][1]['p'][2]);
+	endforeach;
+else:
+	$projeto = array();
+endif;
 $projetos = $projeto;
 if($format == "json"):
 	echo "{\"projetos\": ".json_encode($projetos)."}";
