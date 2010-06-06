@@ -38,12 +38,9 @@ class DeputadosController extends AppController {
 			$content = $data_pl['tr']['1'];
 			$autor_partido = explode("-", $this->Curioso->tratar($content['td'][1]['p'][0]['content']));
 			
-			$pl['num'] = $thead['td'][0]['a']['content'];
-			$pl['orgao'] = $thead['td'][1]['p'];
-			$pl['autor'] = json_encode($autor_partido);
-			$pl['despacho'] = empty($content['td'][1]['p'][2]) ? null : $this->Curioso->tratar($content['td'][1]['p'][2]);
+			$pl['id'] = $thead['td'][0]['a']['content'];
 			$url_more_info = 'http://www.camara.gov.br/sileg/'.$thead['td'][0]['a']['href'];
-			
+			$pl['url'] = $url_more_info;
 			$this->Curioso->format = "json";
 			$more_info = $this->Curioso->scrap($url_more_info, '//*[@id="content"]');
 
@@ -59,27 +56,15 @@ class DeputadosController extends AppController {
 				$_data = $more_info['div']['div']['2']['p'][0]['content'];
 				$data = explode("/",$_data);
 				$data = $data[2].'-'.$data[1].'-'.$data[0];
+				
 				$pl['data_apresentacao'] = $this->Curioso->tratar($data);
-				$pl['apreciacao'] = $this->Curioso->tratar($more_info['div']['div'][2]['p'][1]['content']);
-				$pl['regime_de_tramitacao'] = $this->Curioso->tratar($more_info['div']['div'][2]['p'][2]['content']);
-				$pl['apensado'] = empty($more_info['div']['div'][2]['p'][3]['a']) ? null : json_encode($this->Curioso->tratar($more_info['div']['div'][2]['p'][3]['a']));
-				$pl['emenda'] = $this->Curioso->tratar($more_info['div']['p'][0]['content']);
 				$pl['explicacao_emenda'] = $this->Curioso->tratar($more_info['div']['p'][1]['content']);
-				$pl['indexacao'] = empty($more_info['div']['p'][2]['content']) ? null : $this->Curioso->tratar($more_info['div']['p'][2]['content']);
+				
 				unset($more_info['div']['id']);
 				unset($more_info['div']['script']);
 				unset($more_info['div']['h2']);
 				unset($more_info['div']['div']);
 				unset($more_info['div']['p']);
-				$this->Curioso->format = "xml";
-				$_situacao = $this->Curioso->scrap($url_more_info, '//html/body/div/div[3]/div/div/div/div/div[3]/p[5]');
-				if(stripos($this->Curioso->tratar($_situacao), "Situa") === false):
-					$_situacao = $this->Curioso->scrap($url_more_info, '//html/body/div/div[3]/div/div/div/div/div[3]/p[4]');
-				endif;
-							
-				$_situacao = str_replace(array("<p>","</p>","<results>","</results>","</query>"),"", $_situacao);
-				$_situacao = preg_replace(array("'<query[^>]*>'","'<!xml[^>]*>'"),"",$_situacao);
-				$pl['situacao'] = $this->Curioso->tratar(preg_replace("'<span[^>]*>.*</span>'","",$_situacao));
 			
 			endif;
 			
@@ -88,22 +73,17 @@ class DeputadosController extends AppController {
 		
 		krsort($data_for_save);
 		
-		$i = 1 + $last_id;
-		foreach($data_for_save as $k=>$data):
-			$data['id-temp'] = $i;
-			$data_for_save[$k] = $data;
-			$i=$i+1;
-		endforeach;
+		
 		echo "<ul>";
 		$log = array();
 		foreach($data_for_save as $data):
 			$save = $this->Deputado->save($data);
 			if($save):
-				echo "<li>".$data['num'].": <span style=\"color:#00F\"> OK </span></li>";
-				$log[$data['num']] = "ok";
+				echo "<li>".$data['id'].": <span style=\"color:#00F\"> OK </span></li>";
+				$log[$data['id']] = "ok";
 			else:
-				echo "<li>".$data['num'].": <span style=\"color:#F00\"> ERRO </span></li>";
-				$log[$data['num']] = "erro";
+				echo "<li>".$data['id'].": <span style=\"color:#F00\"> ERRO </span></li>";
+				$log[$data['id']] = "erro";
 			endif;
 		endforeach;
 		echo "</ul>";
