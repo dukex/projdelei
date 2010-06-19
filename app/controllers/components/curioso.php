@@ -46,6 +46,7 @@ class CuriosoComponent extends Object {
  */
 	function initialize() {
 		$this->ch = curl_init();
+		curl_setopt($this->ch ,CURLOPT_CONNECTTIMEOUT,0);
 	}
 
 /**

@@ -1,0 +1,274 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+	margin:0;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img {
+	border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol,ul {
+	list-style:none;
+}
+caption,th {
+	text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+
+	font-weight:normal;
+}
+q:before,q:after {
+	content:'';
+}
+abbr,acronym {
+	border:0;
+}
+
+html{
+	font-size:100%;
+	min-height:101%;
+}
+body{
+	font-size:62.5%;
+	font-family:"Lucida Grande","Lucida Sans Unicode",Arial,Verdana,sans-serif;
+	color:#666;
+	background:/*url(images/grid.gif) top center repeat-y*/ #fff; /* Uncomment to display the grid */
+	border-top:0.5em solid #B23755;
+	padding:0 1em;
+}
+
+/* Sets styles for any 'start' grids - this class MUST be given to a grid that is the first in a horizontal series */
+.clear{
+	clear:both;
+}
+
+
+/*PARAGRAPHS
+-------------------------------------------------------- */
+.generic p{
+	font-size:1.2em;
+	line-height:1.5em;
+	margin-bottom:1.5em;
+}
+/* Styles an introductory paragraph, similar to newspapers. Assign this class to the first paragraph in an article */
+p.intro:first-line{
+	font-variant:small-caps;
+}
+/* Styles a drop cap on each paragraph with this class */
+p.drop:first-letter{
+	float:left;
+	font-size:4em;
+
+	margin:-0.05em 0.1em -0.1em 0;
+}
+/*HEADINGS
+-------------------------------------------------------- */
+h1{
+	color:#000;
+	font-size:3em;
+	margin-bottom:0.6em;
+	font-style:italic;
+	line-height:1.2em;
+}
+h2{
+	color:#000;
+	font-size:2em;
+	margin-bottom:0.9em;
+	line-height:0.9em;
+}
+h3{
+	color:#000;
+	font-size:1.5em;
+	margin-bottom:1.2em;
+	line-height:1.2em;
+	font-variant:small-caps;
+}
+h4{
+	color:#000;
+	font-size:1.2em;
+	margin-bottom:1.5em;
+	line-height:1.5em;
+	font-variant:small-caps;
+}
+h5{
+	color:#000;
+	font-size:1em;
+	margin-bottom:1.8em;
+	line-height:1.8em;
+	font-variant:small-caps;
+}
+h6{
+	color:#000;
+	font-size:1em;
+	margin-bottom:1.8em;
+	line-height:1.8em;
+}
+/*LINKS
+-------------------------------------------------------- */
+p a{
+	color:#000;
+}
+p a:hover{
+	text-decoration:none;
+}
+h1 a{
+	color:#000;
+}
+h1 a:hover{
+	text-decoration:none;
+}
+li a{
+	color:#000;
+}
+li a:hover{
+	text-decoration:none;
+}
+/*ALL THE TRIMMINGS
+-------------------------------------------------------- */
+blockquote p{
+	font-size:1.2em!important;
+	line-height:1.5em!important;
+	margin-bottom:1.5em!important;
+	font-style:italic;
+	font-weight:bold;
+}
+blockquote p cite{
+	font-style:normal;
+}
+.generic strong{
+	font-variant:small-caps;
+}
+.generic em{
+	font-style:italic;
+	font-weight:inherit;
+}
+.amp{ /* Give those ampersands a right sexy look */
+	font-family:Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", serif;
+	font-style:italic;
+	font-weight:normal;
+	line-height:inherit;
+}
+abbr{
+	border-bottom:1px dotted #666;
+	border-color:inherit;
+	cursor:help;
+}
+.clear{
+	clear:both;
+}
+.right-float{ /* Float any item to the right */
+	float:right;
+	margin-left:2em;
+	margin-right:0;
+}
+.left-float{ /* Float any item to the left */
+	float:left;
+	margin-right:2em;
+	margin-left:0;
+}
+.code{ /* Styling for and code type items */
+	font-family:Courier, "Courier New", monospace;
+	background:#ddd;
+	font-size:1em;
+}
+/*-------------------------------------------+
+|                                            |
+|               IMAGE STYLES                 |
+|                                            |
++-------------------------------------------*/
+img{
+	font-size:1em;
+}
+img.left-img{ /* Float any image to the LEFT and give it some margin */
+	font-size:1em;
+	float:left;
+	padding:2px;
+	border:1px solid #ccc;
+	margin-bottom:1.8em;
+	margin-right:2em;
+	margin-top:0.3em;
+}
+img.right-img{ /* Float any image to the RIGHT and give it some margin */
+	font-size:1em;
+	float:right;
+	padding:2px;
+	border:1px solid #ccc;
+	margin-bottom:1.8em;
+	margin-left:2em;
+	margin-top:0.3em;
+}
+/*CONTACT FORM STYLES
+-------------------------------------------------------- */
+#contact-form{
+}
+#contact-form label{
+	width:10em;
+	float:left;
+	margin-top:0.6em;
+}
+#name, #form-email, #url, #location{
+	width:42.7em;
+	height:20px;
+	padding:3px;
+	padding-top:5px;
+	border:2px solid #666;
+	margin-bottom:18px;
+	background:#fff !important;
+}
+#comments{
+	width:43.8em;
+	height:10em;
+	padding:3px;
+	border:2px solid #666;
+	margin-bottom:18px;
+	overflow:auto;
+	background:#fff !important;
+}
+#name:active, #form-email:active, #url:active, #location:active, #comments:active, #submit:active, #name:focus, #form-email:focus, #url:focus, #location:focus, #comments:focus, #submit:focus{
+	border:2px solid #000;
+}
+#submit{
+	clear:both;
+	padding:5px;
+	border:2px solid #666;
+	background:#fff !important;
+	cursor:pointer;
+	margin-left:9em;
+}
+
+ul{
+	margin-bottom:1.8em;
+	list-style:square inside;
+}
+ul li{
+	font-size:1.2em;
+	line-height:1.5em;
+}
+ul li.caption{ /* Apply this class to the first list item in a list to give it a caption */
+	font-variant:small-caps;
+	list-style:none;
+	color:#000;
+}
+li > ul, li > ol{
+	margin-bottom:0;
+	margin-left:5em;
+}
+li > ul li, li > ol li{
+	font-size:1em;
+}
+ol{
+	margin-bottom:1.8em;
+	list-style:decimal inside;
+}
+ol li{
+	font-size:1.2em;
+	line-height:1.5em;
+}
+strong{font-weight: 700}
+acronym{border-bottom:1px dotted;cursor:help }

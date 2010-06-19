@@ -39,11 +39,13 @@ if (!class_exists('File')) {
 	function make_clean_css($path, $name) {
 		App::import('Vendor', 'csspp' . DS . 'csspp');
 		$data = file_get_contents($path);
-		$csspp = new csspp();
-		$output = $csspp->compress($data);
-		$ratio = 100 - (round(strlen($output) / strlen($data), 3) * 100);
-		$output = " /* file: $name, ratio: $ratio% */ " . $output;
-		return $output;
+		$csspp = new csspp($path);
+		$csspp->setOption('minify', FALSE);
+		#$output = $csspp->compress($data);
+		#$csspp->css = $da
+		$ratio = 100 - (round(strlen($csspp) / strlen($data), 3) * 100);
+		$csspp = " /* file: $name, ratio: $ratio% */ " . $csspp;
+		return $csspp;
 	}
 /**
  * Write CSS cache
