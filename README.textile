@@ -1,9 +1,1 @@
 h1. PROJdeLei
-
-
-h2. Road Map 0.1
-
-* Salvar proposições em um banco de dados
-* Adicionar novas fontes de dados
-* Otimizar o código existente
-* Melhorar a API: Dar a possibilidade de buscar informações dos projetos de lei
