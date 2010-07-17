@@ -1,4 +1,0 @@
-#http://www.camara.gov.br/sileg/Prop_Lista.asp?Sigla=PL&Numero=&Ano=2010&Autor=&Relator=&dtInicio=&dtFim=&Comissao=&Situacao=&Ass1=&Ass2=&Ass3=&co1=&co2=&OrgaoOrigem=todos
-RewriteEngine on
-RewriteRule ^(search.(xml|json|rss)(.*))$ api.php?format=$2&param=$3 [L]
-
