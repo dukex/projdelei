@@ -1,0 +1,10 @@
+<div style="padding-left:90px">
+    <form action='/update' method="POST">
+        <textarea name="update" rows="4" cols="50"></textarea>
+        <input type="submit" value="Post to Twitter"/>
+    </form>
+</div>
+
+<br/>
+
+<%= partial('timeline', :locals => {:tweets => @tweets}) %>
