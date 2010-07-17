@@ -1,4 +1,1 @@
-/app/config
-/app/tmp
-/plugins
-/vendors
+config.yml
