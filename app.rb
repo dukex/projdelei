@@ -4,6 +4,7 @@ require 'twitter_oauth'
 require 'haml'
 require 'yaml'
 require 'hpricot'
+require 'uri'
 require 'open-uri'
 require 'models'
 
@@ -15,81 +16,82 @@ before do
   @client = TwitterOAuth::Client.new(
     :consumer_key => ENV['CONSUMER_KEY'] || @@config['consumer_key'],
     :consumer_secret => ENV['CONSUMER_SECRET'] || @@config['consumer_secret'],
-    :token =>  @@config['token'],
-    :secret =>  @@config['secret']
+    :token => @@config['token'],
+    :secret => @@config['secret']
   )
- 
- 
-  #Scrap
-  url = "http://www.camara.gov.br/sileg/Prop_Lista.asp?"
-  url << "Sigla=PL&"
-  url << "Numero=&" 
-  url << "Ano=2010&" 
-  url << "Autor=&" 
-  url << "Relator=&" 
-  url << "dtInicio=&" 
-  url << "dtFim=&" 
-  url << "Comissao=&" 
-  url << "Situacao=&" 
-  url << "Ass1=&" 
-  url << "Ass2=&" 
-  url << "Ass3=&" 
-  url << "co1=&" 
-  url << "co2=&" 
-  url << "OrgaoOrigem=todos"
-  camara = Hpricot(open(url, "User-Agent" => "Emerson Vinicius .|.").read)
-  (camara/"body/div/div[3]/div/div/div/div/form/table/tbody").each do |pl|
-    @sileg = pl.search("//input[@name='chkListaProp']").attr("value").split(";")
-    @id = @sileg[0]
-    if !exist? :id => @id
-      @orgao = (pl/"tr[1]/td[2]").inner_html
-      @situacao = (pl/"tr[1]/td[3]").inner_html
-      @autor = (pl/"tr[2]/td[2]/p[1]")
-      
-      url_detalhe = "http://www.camara.gov.br/sileg/Prop_Detalhe.asp?id=#{@id}"
-      
-      detalhes_pl =  Hpricot(open(url_detalhe, "User-Agent" => "Emerson Vinicius Bot").read)
-    
-      (detalhes_pl/"body/div/div[3]/div/div/div/div").each do |porcaria|
-        
-        @pl = (porcaria/"div[2]/p[1]/a").inner_html
-        @data = (porcaria/"div[3]/p[1]").inner_html.split("</span>")[1]
-        
-        (porcaria/"p").each do |possives_emenda|
-          
-          if possives_emenda.to_s.match('Explica&ccedil;&atilde;o da Ementa:')
-            @explicacao = possives_emenda.inner_html.split("</span>")[1].to_s
-          else
-            @emenda = (porcaria/"> p").first.inner_html.split("</span>")[1]
-          end
-          
-        end
-        
-        @emenda = @explicacao if @explicacao    
-        @explicacao = nil
-        
-      end
-    end
-  end
- 
-  
 end
 
 get '/' do
-  haml :index
+  erb :index
 end
 
 get '/scrap' do
-  
+ scrapy
+ "Yup \o/"
 end
 
-helpers do    
+
+helpers do  
+  def scrapy
+    url = "http://www.camara.gov.br/sileg/Prop_Lista.asp?Sigla=PL&Ano=2010&OrgaoOrigem=todos"
+    camara = Hpricot(open(url, "User-Agent" => "Dukes Bot .|.").read)
+    
+    (camara/"body/div/div[3]/div/div/div/div/form/table/tbody").each do |pl|
+
+      sileg = pl.search("//input[@name='chkListaProp']").attr("value").split(";")
+      id = sileg[0]
+      pl = (pl/".iconDetalhe").inner_html
+
+      if !exist? :sileg => id
+        url_detalhe = "http://www.camara.gov.br/sileg/Prop_Detalhe.asp?id=#{id}"
+        query = "select * from html where url=\"" + url_detalhe + "\" and xpath='//body/div/div[3]/div/div/div/div/p'"
+      
+        yql = "http://query.yahooapis.com/v1/public/yql?q=" + URI.escape(query)
+        detalhe_pl = Hpricot.XML(open(yql).read)
+        emenda = ''
+        (detalhe_pl/"query/results/p").each do |porcarias|
+          if porcarias.to_s.match("Explicação da Ementa:")
+            emenda = porcarias.inner_html.split("</span>")[1].to_s
+          end
+        end
+        
+        if emenda.length == 0
+          emenda = (detalhe_pl/"query/results/p[1]").inner_html.split("</span>")[1].to_s
+        end
+
+        tweet = tweet pl, url_detalhe, emenda
+
+        projdelei = ProjectOfLaw.create({
+                      :sileg => id,
+                      :tweet  => tweet,              
+                    })
+        if projdelei.save
+          @client.update(tweet)
+        end
+      end
+    end
+  end
+
   def exist?(options = {})
-    @data = ProjectOfLaw.first(:id => options[:id]) 
+    @data = ProjectOfLaw.first(:sileg => options[:sileg]) 
     if @data
       return true
     else
       return false
     end
   end
+
+  def tweet(pl, url, txt)
+    url_min = shorten url
+
+    return "#{url_min} #{txt[0,105]}... #{pl}".gsub( /[\n\r]/,' ').gsub('  ',' ')
+
+  end
+
+  def shorten(url)
+    new_url = open("http://api.j.mp/v3/shorten?login=#{@@config['user_bitly']}&apiKey=#{@@config['key_bitly']}&longUrl=#{url}&format=txt").read
+    return new_url
+  end
 end
+
+
