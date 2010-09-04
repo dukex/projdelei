@@ -2,5 +2,7 @@ hpricot
 twitter_oauth
 haml
 bson_ext
+open-uri
 sinatra
+sinatra-mongomapper
 mongo_mapper
