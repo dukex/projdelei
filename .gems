@@ -4,4 +4,4 @@ haml
 bson_ext
 sinatra
 sinatra-mongomapper
-mongo_mapper
+i18n
