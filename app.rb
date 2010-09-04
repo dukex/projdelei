@@ -21,14 +21,16 @@ before do
   )
 end
 
+
 get '/' do
-  erb :index
+  "ProjdeLei"
 end
 
 get '/scrap' do
  scrapy
  "Yup \o/"
 end
+
 
 
 helpers do  
