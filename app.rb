@@ -26,7 +26,7 @@ get '/' do
   "ProjdeLei"
 end
 
-get '/scrap' do
+get '/scrapy' do
  scrapy
  "Yup \o/"
 end
