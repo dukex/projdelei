@@ -1,4 +1,4 @@
-hpricot, '0.8.2'
+hpricot
 sinatra, '1.0'
 twitter_oauth, '0.4.3'
 haml, '3.0.18'
