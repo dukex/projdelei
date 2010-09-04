@@ -3,4 +3,3 @@ twitter_oauth
 haml
 bson_ext
 mongo_mapper
-yaml
