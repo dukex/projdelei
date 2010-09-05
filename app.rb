@@ -48,15 +48,14 @@ helpers do
       id = sileg[0]
       pl = (pl/".iconDetalhe").inner_html
 
-      Log.info "#{sileg}"
-      Log.info "#{id}"
-      Log.info "#{pl}"
-=begin
       if !exist? :sileg => id
+      
         url_detalhe = "http://www.camara.gov.br/sileg/Prop_Detalhe.asp?id=#{id}"
         query = "select * from html where url=\"" + url_detalhe + "\" and xpath='//body/div/div[3]/div/div/div/div/p'"
 
         yql = "http://query.yahooapis.com/v1/public/yql?q=" + URI.escape(query)
+        Log.info "#{yql}"
+=begin
         detalhe_pl = Hpricot.XML(open(yql).read)
         emenda = ''
         
@@ -79,8 +78,8 @@ helpers do
         if projdelei.save
           @client.update(tweet)
         end
-      end
 =end
+      end
     end
   end
 
