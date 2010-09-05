@@ -72,12 +72,8 @@ helpers do
           emenda = (detalhe_pl/"query/results/p[1]").inner_html.split("</span>")[1].to_s
         end
         
-        
         tweet = tweet pl, url_detalhe, emenda
-        Log.info "====== #{tweet.length} ========"
-        Log.info "#{tweet}"
 
-=begin
         projdelei = ProjectOfLaw.create({
                       :sileg => id,
                       :tweet  => tweet,              
@@ -85,7 +81,6 @@ helpers do
         if projdelei.save
           @client.update(tweet)
         end
-=end
       end
     end
   end
