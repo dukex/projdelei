@@ -102,8 +102,9 @@ helpers do
   end
 
   def shorten(url)
-    Log.info "#{@@config['user_bitly']}"
-    Log.info "#{@@config['key_bitly']}"
+    Log.info @@config
+    Log.info "User: #{@@config['user_bitly']}"
+    Log.info "Key: #{@@config['key_bitly']}"
     Log.info "#{url}"
     Log.info "========="
     #new_url = open("http://api.j.mp/v3/shorten?login=#{@@config['user_bitly']}&apiKey=#{@@config['key_bitly']}&longUrl=#{url}&format=txt").read
