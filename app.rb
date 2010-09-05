@@ -74,9 +74,6 @@ helpers do
         
         tweet = tweet pl, url_detalhe, emenda
         
-        Log.info "#{tweet}"
-        Log.info "================="
-
 =begin
         projdelei = ProjectOfLaw.create({
                       :sileg => id,
@@ -101,12 +98,16 @@ helpers do
 
   def tweet(pl, url, txt)
     url_min = shorten url
-    return "#{url_min} #{txt[0,105]}... #{pl}".gsub( /[\n\r]/,' ').gsub('  ',' ')
+    #return "#{url_min} #{txt[0,105]}... #{pl}".gsub( /[\n\r]/,' ').gsub('  ',' ')
   end
 
   def shorten(url)
-    new_url = open("http://api.j.mp/v3/shorten?login=#{@@config['user_bitly']}&apiKey=#{@@config['key_bitly']}&longUrl=#{url}&format=txt").read
-    return new_url
+    Log.info "#{@@config['user_bitly']}"
+    Log.info "#{@@config['key_bitly']}"
+    Log.info "#{url}"
+    Log.info "========="
+    #new_url = open("http://api.j.mp/v3/shorten?login=#{@@config['user_bitly']}&apiKey=#{@@config['key_bitly']}&longUrl=#{url}&format=txt").read
+    #return new_url
   end
 end
 
