@@ -41,7 +41,7 @@ helpers do
   def scrapy
     url = "http://www.camara.gov.br/sileg/Prop_Lista.asp?Sigla=PL&Ano=2010&OrgaoOrigem=todos"
     camara = Hpricot(open(url, "User-Agent" => "Dukes Bot").read)
-
+    Log.info "#{camara.to_s}"
     (camara/"body/div/div[3]/div/div/div/div/form/table/tbody").each do |pl|
       sileg = pl.search("//input[@name='chkListaProp']").attr("value").split(";")
       id = sileg[0]
