@@ -4,9 +4,13 @@ $LOAD_PATH.unshift(lib_dir) unless $LOAD_PATH.include?(lib_dir)
 
 require 'models'
 
+set :logging, :true
+
 configure do
-  set :app_file, __FILE__
-  set :haml, {:format => :html5 }
+  Log = Logger.new("log/sinatra.log")
+  Log.level  = Logger::INFO 
+  
+  @@config = YAML.load_file("config.yml") rescue nil || {}
 end
 
 get "/" do
