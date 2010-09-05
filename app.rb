@@ -52,7 +52,7 @@ helpers do
       if !exist? :sileg => id
   
         pisanofreioze += 1
-        break unless pisanofreioze < 3
+        break unless pisanofreioze < 4
 
         url_detalhe = "http://www.camara.gov.br/sileg/Prop_Detalhe.asp?id=#{id}"
         query = "select * from html where url=\"" + url_detalhe + "\" and xpath='//body/div/div[3]/div/div/div/div/p'"
@@ -72,11 +72,12 @@ helpers do
           emenda = (detalhe_pl/"query/results/p[1]").inner_html.split("</span>")[1].to_s
         end
         
-        Log.info "#{emenda}"
-        Log.info "================="
-=begin
         tweet = tweet pl, url_detalhe, emenda
+        
+        Log.info "#{tweet}"
+        Log.info "================="
 
+=begin
         projdelei = ProjectOfLaw.create({
                       :sileg => id,
                       :tweet  => tweet,              
