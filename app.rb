@@ -54,7 +54,11 @@ helpers do
         query = "select * from html where url=\"" + url_detalhe + "\" and xpath='//body/div/div[3]/div/div/div/div/p'"
 
         yql = "http://query.yahooapis.com/v1/public/yql?q=" + URI.escape(query)
+        Log.info "===== Log ====="
         Log.info "#{yql}"
+        Log.info "#{open(yql).read}"
+        Log.info "================"
+
 =begin
         detalhe_pl = Hpricot.XML(open(yql).read)
         emenda = ''
