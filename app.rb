@@ -68,13 +68,13 @@ helpers do
           end
         end
 
-        Log.info "#{emenda}"
-        Log.info "================="
-=begin
         if emenda.length == 0
           emenda = (detalhe_pl/"query/results/p[1]").inner_html.split("</span>")[1].to_s
         end
-
+        
+        Log.info "#{emenda}"
+        Log.info "================="
+=begin
         tweet = tweet pl, url_detalhe, emenda
 
         projdelei = ProjectOfLaw.create({
