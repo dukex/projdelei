@@ -72,6 +72,8 @@ helpers do
           emenda = (detalhe_pl/"query/results/p[1]").inner_html.split("</span>")[1].to_s
         end
         
+        Log.info @@config
+
         tweet = tweet pl, url_detalhe, emenda
         
 =begin
