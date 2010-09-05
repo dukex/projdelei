@@ -33,4 +33,21 @@ helpers do
       return false
     end
   end
+
+  def tweet(pl, url, txt)
+    url_min = shorten url
+    #return "#{url_min} #{txt[0,105]}... #{pl}".gsub( /[\n\r]/,' ').gsub('  ',' ')
+  end
+
+  def shorten(url)
+    Log.info @@config
+    Log.info "User: #{@@config['user_bitly']}"
+    Log.info "Key: #{@@config['key_bitly']}"
+    Log.info "#{url}"
+    Log.info "========="
+    #new_url = open("http://api.j.mp/v3/shorten?login=#{@@config['user_bitly']}&apiKey=#{@@config['key_bitly']}&longUrl=#{url}&format=txt").read
+    #return new_url
+  end
 end
+
+
