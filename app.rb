@@ -40,16 +40,24 @@ end
 helpers do  
   def scrapy
     url = "http://www.camara.gov.br/sileg/Prop_Lista.asp?Sigla=PL&Ano=2010&OrgaoOrigem=todos"
-    camara = Hpricot(open(url, "User-Agent" => "Dukes Bot").read)
-    
+    camara = Hpricot(open(url, "User-Agent" => "Dukes Bot").read) 
+    pisanofreioze = 0
+
     (camara/"body/div/div[3]/div/div/div/div/form/table/tbody").each do |pl|
-      
+    
       sileg = pl.search("//input[@name='chkListaProp']").attr("value").split(";")
       id = sileg[0]
       pl = (pl/".iconDetalhe").inner_html
 
       if !exist? :sileg => id
-      
+        
+        pisanofreioze += 1
+
+        if pisanofreioze > 3
+          break
+        end
+        
+
         url_detalhe = "http://www.camara.gov.br/sileg/Prop_Detalhe.asp?id=#{id}"
         query = "select * from html where url=\"" + url_detalhe + "\" and xpath='//body/div/div[3]/div/div/div/div/p'"
 
