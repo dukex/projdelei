@@ -13,11 +13,11 @@ set :logging, :true
 configure do
   Log = Logger.new("log/sinatra.log")
   Log.level  = Logger::INFO 
-  
-  @@config = YAML.load_file("config.yml") rescue nil || {}
-end
+ end
 
 before do
+  @@config = YAML.load_file("config.yml") rescue nil || {}
+
   @client = TwitterOAuth::Client.new(
     :consumer_key => ENV['CONSUMER_KEY'] || @@config['consumer_key'],
     :consumer_secret => ENV['CONSUMER_SECRET'] || @@config['consumer_secret'],
