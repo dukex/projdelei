@@ -8,7 +8,12 @@ require 'uri'
 require 'open-uri'
 require 'models'
 
+set :logging, :true
+
 configure do
+  Log = Logger.new("log/sinatra.log")
+  Log.level  = Logger::INFO 
+  
   @@config = YAML.load_file("config.yml") rescue nil || {}
 end
 
