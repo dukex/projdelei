@@ -23,6 +23,7 @@ end
 
 
 get '/' do
+  # TODO: Criar um layout para Index
   "ProjdeLei"
 end
 
@@ -31,13 +32,12 @@ get '/scrapy' do
  "Yup \o/"
 end
 
-
-
 helpers do  
   def scrapy
     url = "http://www.camara.gov.br/sileg/Prop_Lista.asp?Sigla=PL&Ano=2010&OrgaoOrigem=todos"
-    camara = Hpricot(open(url, "User-Agent" => "Dukes Bot .|.").read)
-    
+    camara = Hpricot(open(url, "User-Agent" => "Dukes Bot").read)
+    ""+camara.to_s+""
+=begin
     (camara/"body/div/div[3]/div/div/div/div/form/table/tbody").each do |pl|
 
       sileg = pl.search("//input[@name='chkListaProp']").attr("value").split(";")
@@ -72,6 +72,7 @@ helpers do
         end
       end
     end
+=end
   end
 
   def exist?(options = {})
@@ -85,9 +86,7 @@ helpers do
 
   def tweet(pl, url, txt)
     url_min = shorten url
-
     return "#{url_min} #{txt[0,105]}... #{pl}".gsub( /[\n\r]/,' ').gsub('  ',' ')
-
   end
 
   def shorten(url)
