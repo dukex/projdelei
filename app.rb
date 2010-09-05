@@ -36,10 +36,9 @@ helpers do
   def scrapy
     url = "http://www.camara.gov.br/sileg/Prop_Lista.asp?Sigla=PL&Ano=2010&OrgaoOrigem=todos"
     camara = Hpricot(open(url, "User-Agent" => "Dukes Bot").read)
-    ""+camara.to_s+""
-=begin
-    (camara/"body/div/div[3]/div/div/div/div/form/table/tbody").each do |pl|
 
+    (camara/"body/div/div[3]/div/div/div/div/form/table/tbody").each do |pl|
+=begin
       sileg = pl.search("//input[@name='chkListaProp']").attr("value").split(";")
       id = sileg[0]
       pl = (pl/".iconDetalhe").inner_html
@@ -71,8 +70,8 @@ helpers do
           @client.update(tweet)
         end
       end
-    end
 =end
+    end
   end
 
   def exist?(options = {})
