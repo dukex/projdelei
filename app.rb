@@ -50,33 +50,27 @@ helpers do
       pl = (pl/".iconDetalhe").inner_html
 
       if !exist? :sileg => id
-        
+  
         pisanofreioze += 1
-
-        if pisanofreioze > 3
-          break
-        end
-        
+        break unless pisanofreioze > 3
 
         url_detalhe = "http://www.camara.gov.br/sileg/Prop_Detalhe.asp?id=#{id}"
         query = "select * from html where url=\"" + url_detalhe + "\" and xpath='//body/div/div[3]/div/div/div/div/p'"
 
         yql = "http://query.yahooapis.com/v1/public/yql?q=" + URI.escape(query)
-        Log.info "===== Log ====="
-        Log.info "#{yql}"
-        Log.info "#{open(yql).read}"
-        Log.info "================"
 
-=begin
         detalhe_pl = Hpricot.XML(open(yql).read)
         emenda = ''
-        
+
         (detalhe_pl/"query/results/p").each do |porcarias|
           if porcarias.to_s.match("Explicação da Ementa:")
             emenda = porcarias.inner_html.split("</span>")[1].to_s
           end
         end
 
+        Log.info "#{emenda}"
+        Log.info "================="
+=begin
         if emenda.length == 0
           emenda = (detalhe_pl/"query/results/p[1]").inner_html.split("</span>")[1].to_s
         end
