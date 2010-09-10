@@ -8,7 +8,7 @@ else
   set :mongomapper, 'mongomapper://localhost:27017/projdelei'
 end
 
-class ProjectOfLaw
+class Project
   include MongoMapper::Document
   key :sileg, Integer
   key :tweet, String

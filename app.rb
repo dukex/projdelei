@@ -37,6 +37,10 @@ get '/scrapy' do
  "Yup \o/"
 end
 
+get '/tweet' do
+  @client.update(tweet)
+end
+
 helpers do  
   def scrapy
     url = "http://www.camara.gov.br/sileg/Prop_Lista.asp?Sigla=PL&Ano=2010&OrgaoOrigem=todos"
@@ -46,7 +50,7 @@ helpers do
     (camara/"body/div/div[3]/div/div/div/div/form/table/tbody").each do |pl|
     
       sileg = pl.search("//input[@name='chkListaProp']").attr("value").split(";")
-      id = sileg[0]
+      id = sileg[0].to_i
       pl = (pl/".iconDetalhe").inner_html
 
       if !exist? :sileg => id
@@ -74,19 +78,19 @@ helpers do
         
         tweet = tweet pl, url_detalhe, emenda
 
-        projdelei = ProjectOfLaw.create({
+        projdelei = Project.create({
                       :sileg => id,
                       :tweet  => tweet,              
                     })
         if projdelei.save
-          @client.update(tweet)
+           @client.update(tweet)
         end
       end
     end
   end
 
   def exist?(options = {})
-    @data = ProjectOfLaw.first(:sileg => options[:sileg]) 
+    @data = Project.first(:sileg => options[:sileg]) 
     if @data
       return true
     else
