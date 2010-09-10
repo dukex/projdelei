@@ -3,7 +3,7 @@ require 'dm-timestamps'
 
 DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/database.db")
 
-class ProjectOfLaw
+class Project
   include MongoMapper::Document
   key :sileg, Integer
   key :tweet, String
