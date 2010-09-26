@@ -6,12 +6,19 @@ p. Because I do not will write code again
 
 h2. Install
 
+p. Clone the project with name of your app 
+
 @git clone git://github.com/emersonvinicius/sinatra-template.git my_app@
+
+p. Enter in folder of your app
 
 @cd my_app@
 
+p. Install Dependencies
+
 @bundle install@
 
+p. Init server
 @thin start@
 
 
