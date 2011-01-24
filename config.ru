@@ -1,2 +1,8 @@
-require File.dirname(__FILE__) + '/application'
+require 'rubygems'
+require 'bundler'
+
+Bundler.require
+
+require File.expand_path 'app'
+
 run Sinatra::Application
