@@ -1,7 +1,22 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    addressable (2.2.3)
+    data_objects (0.10.2)
+      addressable (~> 2.1)
     diff-lcs (1.1.2)
+    dm-core (1.0.2)
+      addressable (~> 2.2)
+      extlib (~> 0.9.15)
+    dm-do-adapter (1.0.2)
+      data_objects (~> 0.10.2)
+      dm-core (~> 1.0.2)
+    dm-sqlite-adapter (1.0.2)
+      dm-do-adapter (~> 1.0.2)
+      do_sqlite3 (~> 0.10.2)
+    do_sqlite3 (0.10.2)
+      data_objects (= 0.10.2)
+    extlib (0.9.15)
     haml (3.0.25)
     rack (1.2.1)
     rack-test (0.5.7)
@@ -24,6 +39,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  dm-core
+  dm-sqlite-adapter
   haml
   rack-test
   rcov
