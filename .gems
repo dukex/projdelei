@@ -1,7 +1,0 @@
-hpricot, '0.8.2'
-sinatra, '1.0'
-twitter_oauth, '0.4.3'
-haml, '3.0.18'
-bson_ext
-mongo_mapper, '0.8.4'
-yaml
