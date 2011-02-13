@@ -12,5 +12,6 @@ group :test, :development do
   gem 'rcov'
   gem 'ruby-debug'
   gem 'fakeweb'
+  gem 'metric_fu'
 end
 
