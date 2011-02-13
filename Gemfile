@@ -9,5 +9,6 @@ group :test do
   gem 'rack-test'
   gem 'rspec', '>= 2.0'
   gem 'rcov'
+  gem 'fakeweb'
 end
 
