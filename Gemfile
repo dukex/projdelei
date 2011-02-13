@@ -2,6 +2,7 @@ source :rubygems
 
 gem 'sinatra'
 gem 'haml'
+gem "nokogiri"
 gem 'dm-core'
 gem 'dm-sqlite-adapter'
 
