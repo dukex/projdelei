@@ -6,10 +6,11 @@ gem "nokogiri"
 gem 'dm-core'
 gem 'dm-sqlite-adapter'
 
-group :test do
+group :test, :development do
   gem 'rack-test'
   gem 'rspec', '>= 2.0'
   gem 'rcov'
+  gem 'ruby-debug'
   gem 'fakeweb'
 end
 
