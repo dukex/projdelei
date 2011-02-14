@@ -13,5 +13,6 @@ group :test, :development do
   gem 'ruby-debug'
   gem 'fakeweb'
   gem 'metric_fu'
+  gem 'factory_girl'
 end
 
