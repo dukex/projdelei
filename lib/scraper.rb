@@ -11,7 +11,7 @@ class Scraper
   end
 
   def proposition
-    (item/"*[@class='rightIconified iconDetalhe']").text
+    clean(item.css(".iconDetalhe")[0].text)
   end
 
   def link

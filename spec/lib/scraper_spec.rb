@@ -59,6 +59,18 @@ describe Scraper do
     it "should be equal 'PL-8054/201'" do
       @pl8054.proposition.should eql("PL-8054/2011")
     end
+
+    it "should get first PL name" do
+      pl8052 = Scraper.new
+      pl8052.item = fixture_with_nokogiri("PL_8052_2011");
+      pl8052.proposition.should eql("PL-8052/2011")
+    end
+
+    it "should clean proposition" do
+      pl8051 = Scraper.new
+      pl8051.item = fixture_with_nokogiri("PL_8051_2011")
+      pl8051.proposition.should eql("PL-8051/2011")
+    end
   end
 
   describe "#link" do
