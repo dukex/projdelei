@@ -22,4 +22,28 @@ class Scraper
     (item/"tr[2]/td[2]/p[2]").text.split(/Explica.*o:/)[1]
   end
 
+  def remove_tag(string)
+    string.gsub(/<\/.>|<.>/, "")
+  end
+
+  def remove_newline(string)
+    string.gsub(/\n/, " ")
+  end
+
+  def remove_tabulation(string)
+    string.gsub(/\t/, " ")
+  end
+
+  def remove_double_space(string)
+    string.gsub(/\s+/," ")
+  end
+
+  def remove_last_space(string)
+    string.gsub(/\s$/, "")
+  end
+
+  def clean(string)
+    %w{tag tabulation newline double_space last_space}.each{|m| string = send("remove_#{m}", string) }
+    string
+  end
 end

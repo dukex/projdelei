@@ -75,6 +75,35 @@ describe Scraper do
     end
   end
 
+  describe "#clean" do
+    let(:pl){ Scraper.new }
+
+    it "should remove html tag"  do
+      sentence = "<b>Hello Word</b>"
+      pl.clean(sentence).should eql("Hello Word")
+    end
+
+    it "should remove newline" do
+      sentence = "Hello\nWord"
+      pl.clean(sentence).should eql("Hello Word")
+    end
+
+    it "should remove tabulation" do
+      sentence = "Hello\tWord"
+      pl.clean(sentence).should eql("Hello Word")
+    end
+
+    it "should remove double space" do
+      sentence = "Hello  Word"
+      pl.clean(sentence).should eql("Hello Word")
+    end
+
+    it "should remove last space" do
+      sentence = "Hello Word "
+      pl.clean(sentence).should eql("Hello Word")
+    end
+  end
+
   describe "#explication" do
     it "should be 'Estabelece normas para o processo e julgamento dos crimes contra propriedade imaterial (violação do direito autoral)'" do
       @pl8054.explication.should match "Estabelece normas para o processo e julgamento dos crimes contra propriedade imaterial "
