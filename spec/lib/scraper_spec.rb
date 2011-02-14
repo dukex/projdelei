@@ -6,7 +6,7 @@ describe Scraper do
 
   before do
     @pl8054 = Scraper.new
-    @pl8054.item = fixture("PL_8054_2011");
+    @pl8054.item = fixture_with_nokogiri("PL_8054_2011");
   end
 
   describe "URL_BASE" do
