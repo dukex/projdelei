@@ -1,5 +1,5 @@
 require File.expand_path('spec/spec_helper')
-require File.expand_path('spec/support/fixture/camaragov')
+require File.expand_path('spec/support/camaragov')
 
 describe Scraper do
   include Rack::Test::Methods
