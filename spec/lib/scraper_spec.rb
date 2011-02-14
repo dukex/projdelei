@@ -117,8 +117,10 @@ describe Scraper do
   end
 
   describe "#explication" do
-    it "should be 'Estabelece normas para o processo e julgamento dos crimes contra propriedade imaterial (violação do direito autoral)'" do
-      @pl8054.explication.should match "Estabelece normas para o processo e julgamento dos crimes contra propriedade imaterial "
+    it "should contain 'Consolida a legislação federal de cultura.'" do
+      @pl8054.explication.should match "Consolida a legislação federal de cultura."
+    end
+  end
     end
   end
 end

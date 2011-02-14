@@ -19,7 +19,10 @@ class Scraper
   end
 
   def explication
-    (item/"tr[2]/td[2]/p[2]").text.split(/Explica.*o:/)[1]
+    ementa = (item/"tr[2]/td[2]/p[2]").to_s.match(/<b>Ementa: (.*)<b>/)
+    ementa = (item/"tr[2]/td[2]/p[2]").to_s.match(/<b>Ementa: (.*)<\/p>/m) if ementa.nil?
+    clean(ementa.captures[0])
+  end
   end
 
   def remove_tag(string)
