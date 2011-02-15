@@ -13,11 +13,15 @@ require 'factory_girl'
 
 path = "spec/support/factories"
 Dir[File.join(path, '*.rb')].sort.each do |file|
-  puts "File: " + file
   require file
 end
 
 set :environment, :test
-set :run, false
-set :raise_errors, true
-set :logging, false
+
+configure :test do
+  DataMapper.setup(:default, "sqlite::memory:")
+end
+
+Rspec.configure do |config|
+  config.before(:each) { DataMapper.auto_migrate! }
+end
