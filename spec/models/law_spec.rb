@@ -7,4 +7,11 @@ describe Law do
     law.link = "google.com"
     law.should_not be_valid
   end
+
+  it "should uniqueness pl_id" do
+    law.pl_id = 123
+    law.save!
+    Factory.build(:law, :pl_id => "123").should_not be_valid
+  end
+
 end

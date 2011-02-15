@@ -2,8 +2,10 @@ DataMapper.setup(:default, ENV['DATABASE_URL']||"sqlite3://#{Dir.pwd}/database.s
 
 class Law
   include DataMapper::Resource
+  validates_uniqueness_of :pl_id
 
   property :id,            Serial
+  property :pl_id,         Integer
   property :proposition,   String
   property :link,          String, :format => :url
   property :explication,   Text
