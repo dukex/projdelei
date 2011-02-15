@@ -7,6 +7,7 @@ gem 'dm-core'
 gem 'dm-migrations'
 gem 'dm-validations'
 gem 'rspec', '>= 2.0'
+gem 'metric_fu'
 
 group :production do
   gem 'dm-postgres-adapter'
@@ -18,7 +19,6 @@ group :test, :development do
   gem 'rcov'
   gem 'ruby-debug'
   gem 'fakeweb'
-  gem 'metric_fu'
   gem 'factory_girl'
 end
 
