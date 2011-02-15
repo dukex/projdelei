@@ -1,7 +1,12 @@
 require 'rubygems'
+require 'bundler'
+Bundler.require
+
 require 'metric_fu'
 require 'rake'
 require "rspec/core/rake_task"
+require 'app'
+require 'scraper'
 
 desc "Run all test"
 RSpec::Core::RakeTask.new do |spec|
@@ -18,5 +23,13 @@ end
 MetricFu::Configuration.run do |config|
   config.rcov[:test_files] = ['spec/**/*_spec.rb']
   config.rcov[:rcov_opts] << "-Ispec"
+end
+
+namespace :scraper do
+  desc "Run scraper and save in database"
+  task :run do
+    @scraper = Scraper.new
+    @scraper.run!
+  end
 end
 
