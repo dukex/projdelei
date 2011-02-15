@@ -2,7 +2,6 @@ require 'rubygems'
 require 'bundler'
 Bundler.require
 
-require 'metric_fu'
 require 'rake'
 require "rspec/core/rake_task"
 require 'app'
