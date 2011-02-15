@@ -121,6 +121,37 @@ describe Scraper do
       @pl8054.explication.should match "Consolida a legislação federal de cultura."
     end
   end
+
+  describe "#run!"  do
+    let(:camara) {  Scraper.new }
+
+    before do
+      FakeWeb.register_uri(:get, subject.url, :body => fixture("list"))
+    end
+
+    it "should save 30 register in database" do
+      camara.run!
+      Law.count.should eql(30)
+    end
+
+    it "should save pl_id for law" do
+      camara.run!
+      Law.first.pl_id.should eql(491771)
+    end
+
+    it "should save proposition for law" do
+      camara.run!
+      Law.first.proposition.should eql("PL-361/2011")
+    end
+
+    it "should save link for law" do
+      camara.run!
+      Law.first.link.should eql(Scraper::URL_BASE + "/Prop_Detalhe.asp?id=491771")
+    end
+
+    it "should save explication for law" do
+      camara.run!
+      Law.first.explication.should eql("Altera dispositivos da lei nº 9099 de 1995, que dispõe sobre os Juizados Especiais Cíveis e Criminais.")
     end
   end
 end

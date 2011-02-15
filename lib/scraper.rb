@@ -1,3 +1,5 @@
+require 'rubygems'
+require 'open-uri'
 class Scraper
   URL_BASE = "http://www.camara.gov.br/sileg"
   attr_accessor :url, :item
@@ -23,6 +25,16 @@ class Scraper
     ementa = (item/"tr[2]/td[2]/p[2]").to_s.match(/<b>Ementa: (.*)<\/p>/m) if ementa.nil?
     clean(ementa.captures[0])
   end
+
+  def run!
+    data = Nokogiri::HTML(open(url,"User-Agent" => "ProjDeLei Bot" ).read)
+    (data/"body/div/div[3]/div/div/div/div/form/table/tbody").reverse_each do |pl|
+      @item = pl
+      Law.create! :proposition => proposition,
+                  :link => link,
+                  :explication => explication,
+                  :pl_id => pl_id
+    end
   end
 
   def remove_tag(string)

@@ -9,6 +9,7 @@ require 'sinatra'
 require 'rack/test'
 require 'app'
 require 'scraper'
+require 'fakeweb'
 require 'factory_girl'
 
 path = "spec/support/factories"
