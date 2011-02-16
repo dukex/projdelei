@@ -28,8 +28,7 @@ end
 namespace :scraper do
   desc "Run scraper and save in database"
   task :run do
-    @scraper = Scraper.new
-    @scraper.run!
+    Scraper.run!
   end
 end
 
