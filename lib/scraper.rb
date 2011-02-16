@@ -13,7 +13,7 @@ class Scraper
   end
 
   def proposition
-    clean(item.css(".iconDetalhe")[0].text)
+    item.css(".iconDetalhe")[0].text.clean
   end
 
   def link
@@ -23,7 +23,7 @@ class Scraper
   def explication
     ementa = (item/"tr[2]/td[2]/p[2]").to_s.match(/<b>Ementa: (.*)<b>/)
     ementa = (item/"tr[2]/td[2]/p[2]").to_s.match(/<b>Ementa: (.*)<\/p>/m) if ementa.nil?
-    clean(ementa.captures[0])
+    ementa.captures[0].clean
   end
 
   def run!
@@ -35,30 +35,5 @@ class Scraper
                   :explication => explication,
                   :pl_id => pl_id
     end
-  end
-
-  def remove_tag(string)
-    string.gsub(/<\/.>|<.>/, "")
-  end
-
-  def remove_newline(string)
-    string.gsub(/\n/, " ")
-  end
-
-  def remove_tabulation(string)
-    string.gsub(/\t/, " ")
-  end
-
-  def remove_double_space(string)
-    string.gsub(/\s+/," ")
-  end
-
-  def remove_last_space(string)
-    string.gsub(/\s$/, "")
-  end
-
-  def clean(string)
-    %w{tag tabulation newline double_space last_space}.each{|m| string = send("remove_#{m}", string) }
-    string
   end
 end
