@@ -14,6 +14,12 @@ describe Scraper do
       Law.count.should eql(30)
     end
 
+    it "" do
+      Scraper.run!
+      Scraper.run!
+      Law.count.should eql(30)
+    end
+
     it "should save pl_id for law" do
       Scraper.run!
       Law.first.pl_id.should eql(491771)
