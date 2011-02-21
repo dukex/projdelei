@@ -10,7 +10,7 @@ gem 'rspec', '>= 2.0'
 gem 'metric_fu'
 
 group :production do
-  gem 'dm-postgres-adapter'
+  gem 'dm-mysql-adapter'
 end
 
 group :test, :development do
