@@ -5,10 +5,11 @@ class Law
   validates_uniqueness_of :pl_id
 
   property :id,            Serial
-  property :pl_id,         Integer
+  property :pl_id,         Integer, :unique => true
   property :proposition,   String
   property :link,          String, :format => :url
   property :explication,   Text
+  property :was_shared,    Boolean, :default  => false
 end
 
 DataMapper.auto_upgrade!
