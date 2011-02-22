@@ -6,7 +6,7 @@ class LawProject
   property :id,            Serial
   property :pl_id,         Integer, :unique => true
   property :proposition,   String
-  property :link,          String, :format => :url
+  property :link,          Text, :format => :url
   property :explication,   Text
   property :was_shared,    Boolean, :default  => false
 end
