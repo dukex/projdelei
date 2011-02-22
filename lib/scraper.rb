@@ -1,14 +1,12 @@
-require 'law_project'
+require 'law_project_parser'
 class Scraper
   def self.run!
-    LawProject.each do |project_law|
-      begin
-        Law.create! :pl_id => project_law.pl_id,
+    LawProjectParser.each do |project_law|
+      if LawProject.all(:pl_id => project_law.pl_id).count == 0
+        LawProject.create! :pl_id => project_law.pl_id,
                     :proposition => project_law.proposition,
                     :link => project_law.link,
                     :explication => project_law.explication
-      rescue
-        next
       end
     end
   end

@@ -1,6 +1,6 @@
 require 'open-uri'
 
-class LawProject
+class LawProjectParser
   URL_BASE = "http://www.camara.gov.br/sileg"
 
   def self.each(&block)
@@ -31,7 +31,7 @@ module Nokogiri
       end
 
       def link
-        LawProject::URL_BASE + "/Prop_Detalhe.asp?id=#{pl_id}"
+        LawProjectParser::URL_BASE + "/Prop_Detalhe.asp?id=#{pl_id}"
       end
 
       def ementa

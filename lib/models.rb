@@ -1,6 +1,6 @@
 DataMapper.setup(:default, ENV['DATABASE_URL']||"sqlite3://#{Dir.pwd}/database.sqlite3")
 
-class Law
+class LawProject
   include DataMapper::Resource
   validates_uniqueness_of :pl_id
 
