@@ -2,11 +2,13 @@ require 'rubygems'
 require 'bundler'
 Bundler.require
 
-require 'metric_fu'
 require 'rake'
 require "rspec/core/rake_task"
-require 'app'
+require 'metric_fu'
 require 'scraper'
+require 'updater'
+require 'models'
+
 config = YAML.load_file(File.expand_path("config.yml"))
 
 Twitter.configure do |c|
