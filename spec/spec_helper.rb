@@ -10,8 +10,10 @@ require 'rack/test'
 require 'urlshortener'
 require 'app'
 require 'scraper'
+require 'updater'
 require 'fakeweb'
 require 'factory_girl'
+
 
 path = "spec/support/factories"
 Dir[File.join(path, '*.rb')].sort.each do |file|
