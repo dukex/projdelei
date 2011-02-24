@@ -5,6 +5,7 @@ Bundler.require
 require 'rake'
 require "rspec/core/rake_task"
 require 'metric_fu'
+require 'string'
 require 'scraper'
 require 'updater'
 require 'models'
