@@ -18,4 +18,26 @@ describe LawProject do
     Factory.build(:law_project, :pl_id => "123").should_not be_valid
   end
 
+  describe ".tweet" do
+    before do
+      YAML.stub(:load_file).and_return({'api_token' => "", 'user' => "ola" })
+      UrlShortener.stub(:shorten).and_return("http://ola.mundo")
+    end
+
+    it "should shorten url" do
+      law.tweet.should =~ /http:\/\/ola\.mundo/
+    end
+
+    it "should have proposition" do
+      law.tweet.should =~ Regexp.new(law.proposition)
+    end
+
+    it "should have 106 char from explication" do
+      law.tweet.should =~ Regexp.new(law.explication[0,105])
+    end
+
+    it "should have 3 points(...) " do
+      law.tweet.should =~ /\.\.\./
+    end
+  end
 end
