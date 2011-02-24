@@ -7,6 +7,15 @@ require 'rake'
 require "rspec/core/rake_task"
 require 'app'
 require 'scraper'
+config = YAML.load_file(File.expand_path("config.yml"))
+
+Twitter.configure do |c|
+  c.consumer_key = config['twitter']['consumer_key']
+  c.consumer_secret = config['twitter']['consumer_secret']
+  c.oauth_token = config['twitter']['oauth_token']
+  c.oauth_token_secret = config['twitter']['oauth_token_secret']
+end
+
 
 desc "Run all test"
 RSpec::Core::RakeTask.new do |spec|
