@@ -3,3 +3,4 @@ coverage
 *.sw?
 .rvmrc
 tmp
+database.sqlite3
