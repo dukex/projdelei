@@ -14,7 +14,7 @@ describe UrlShortener do
 
     it "should load config file" do
       url = "http://urlmuitolonga.com.br/"
-      YAML.should_receive(:load_file).with(File.expand_path("../config/jmp.yml"))
+      YAML.should_receive(:load_file).with(File.expand_path("config.yml"))
       UrlShortener.shorten(url)
     end
 
