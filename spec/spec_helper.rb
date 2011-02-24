@@ -7,6 +7,7 @@ $:.unshift lib_dir unless $:.include?(lib_dir)
 require 'rspec'
 require 'sinatra'
 require 'rack/test'
+require 'urlshortener'
 require 'app'
 require 'scraper'
 require 'fakeweb'
