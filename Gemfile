@@ -8,6 +8,7 @@ gem 'dm-migrations'
 gem 'dm-validations'
 gem 'rspec', '>= 2.0'
 gem 'metric_fu'
+gem 'twitter'
 
 group :production do
   gem 'dm-mysql-adapter'
