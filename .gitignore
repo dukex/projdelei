@@ -4,3 +4,4 @@ coverage
 .rvmrc
 tmp
 database.sqlite3
+config.yml
