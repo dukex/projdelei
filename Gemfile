@@ -1,6 +1,5 @@
 source :rubygems
 
-gem 'sinatra'
 gem 'haml'
 gem "nokogiri"
 gem 'dm-core', '>= 1.1.0'
