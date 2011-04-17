@@ -8,11 +8,11 @@ require 'rspec'
 require 'sinatra'
 require 'rack/test'
 require 'urlshortener'
-require 'app'
 require 'scraper'
 require 'updater'
 require 'fakeweb'
 require 'factory_girl'
+require 'string'
 
 
 path = "spec/support/factories"
