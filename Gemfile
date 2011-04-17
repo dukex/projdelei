@@ -3,19 +3,19 @@ source :rubygems
 gem 'sinatra'
 gem 'haml'
 gem "nokogiri"
-gem 'dm-core'
-gem 'dm-migrations'
-gem 'dm-validations'
+gem 'dm-core', '>= 1.1.0'
+gem 'dm-migrations', '>= 1.1.0'
+gem 'dm-validations', '>= 1.1.0'
 gem 'rspec', '>= 2.0'
 gem 'metric_fu'
-gem 'twitter'
+gem 'twitter', '>= 1.3.0'
 
 group :production do
-  gem 'dm-mysql-adapter'
+  gem 'dm-mysql-adapter', '>= 1.1.0'
 end
 
 group :test, :development do
-  gem 'dm-sqlite-adapter'
+  gem 'dm-sqlite-adapter', '>= 1.1.0'
   gem 'rack-test'
   gem 'rcov'
   gem 'ruby-debug'
