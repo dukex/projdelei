@@ -14,6 +14,7 @@ class LawProjectParser
   end
 
   def self.data
+    puts url
     Nokogiri::HTML open(url,"User-Agent" => "ProjDeLei Bot" ).read
   end
 end
