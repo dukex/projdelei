@@ -14,7 +14,6 @@ class LawProjectParser
   end
 
   def self.data
-    puts url
     Nokogiri::HTML open(url,"User-Agent" => "ProjDeLei Bot" ).read
   end
 end
@@ -24,7 +23,7 @@ module Nokogiri
   module XML
     class Element
       def pl_id
-        css("input").first["value"].split(";")[0].to_i
+        css("a.rightIconified.iconDetalhe").first.attr("href").gsub(/\D/,"")
       end
 
       def proposition

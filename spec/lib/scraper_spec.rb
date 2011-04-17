@@ -22,22 +22,22 @@ describe Scraper do
 
     it "should save pl_id for law" do
       Scraper.run!
-      LawProject.first.pl_id.should eql(491771)
+      LawProject.first.pl_id.should eql(493873)
     end
 
     it "should save proposition for law" do
       Scraper.run!
-      LawProject.first.proposition.should eql("PL-361/2011")
+      LawProject.first.proposition.should eql("PL-8085/2011 REP-1210")
     end
 
     it "should save link for law" do
       Scraper.run!
-      LawProject.first.link.should eql("http://www.camara.gov.br/sileg/Prop_Detalhe.asp?id=491771")
+      LawProject.first.link.should eql("http://www.camara.gov.br/sileg/Prop_Detalhe.asp?id=493873")
     end
 
     it "should save explication for law" do
       Scraper.run!
-      LawProject.first.explication.should eql("Altera dispositivos da lei nº 9099 de 1995, que dispõe sobre os Juizados Especiais Cíveis e Criminais.")
+      LawProject.first.explication.should eql("Dispõe sobre a presunção de justa causa para desfiliação partidária a não concessão de legenda ao detentor de mandato eletivo, em efetivo exercício, que deseje concorrer ao mesmo cargo político, nas eleições que renove o seu mandato.")
     end
   end
 end
