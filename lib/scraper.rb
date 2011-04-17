@@ -1,4 +1,6 @@
 require 'law_project_parser'
+require 'models'
+
 class Scraper
   def self.run!
     LawProjectParser.each do |project_law|
