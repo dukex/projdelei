@@ -1,8 +1,10 @@
+require 'iconv'
 class Updater
   def self.now
-     law = LawProject.first(:was_shared => false)
-     Twitter.update("#{law.tweet.clean}", :include_entities => true)
-     law.update(:was_shared => true)
+    ic = Iconv.new('UTF-8//IGNORE', 'UTF-8')
+    law = LawProject.first(:was_shared => false)
+    Twitter.update("#{ic.iconv(law.tweet.clean)}", :include_entities => true)
+    law.update(:was_shared => true)
   end
 end
 
