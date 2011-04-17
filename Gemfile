@@ -6,6 +6,8 @@ gem "nokogiri"
 gem 'dm-core'
 gem 'dm-migrations'
 gem 'dm-validations'
+gem 'rspec', '>= 2.0'
+gem 'metric_fu'
 gem 'twitter'
 
 group :production do
@@ -19,7 +21,5 @@ group :test, :development do
   gem 'ruby-debug'
   gem 'fakeweb'
   gem 'factory_girl'
-  gem 'metric_fu'
-  gem 'rspec', '>= 2.0'
 end
 
