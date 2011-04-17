@@ -25,7 +25,7 @@ describe Updater do
 
     it "should call update of Twitter" do
       law = Factory :law_project
-      Twitter.should_receive(:update).with(law.tweet)
+      Twitter.should_receive(:update).with(law.tweet, {:include_entities => true})
       Updater.now
     end
   end
