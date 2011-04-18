@@ -19,11 +19,7 @@ Dir[File.join(path, '*.rb')].sort.each do |file|
   require file
 end
 
-set :environment, :test
-
-configure :test do
-  DataMapper.setup(:default, "sqlite::memory:")
-end
+DataMapper.setup(:default, "sqlite::memory:")
 
 Rspec.configure do |config|
   config.before(:each) { DataMapper.auto_migrate! }
