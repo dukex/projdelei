@@ -19,12 +19,10 @@ Twitter.configure do |c|
   c.oauth_token_secret = config['twitter']['oauth_token_secret']
 end
 
-
 desc "Run all test"
 RSpec::Core::RakeTask.new do |spec|
   spec.rspec_opts = ['--color -d']
 end
-
 
 RSpec::Core::RakeTask.new('rcov') do |spec|
   spec.pattern = 'spec/*/*_spec.rb'
@@ -49,6 +47,4 @@ namespace :twitter do
   task :update do
     Updater.now
   end
-
 end
-
