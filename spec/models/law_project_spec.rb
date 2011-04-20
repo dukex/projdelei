@@ -36,9 +36,8 @@ describe LawProject do
       law.tweet.should =~ /\.\.\./
     end
 
-    it "should not over 200 char" do
-      law.proposition += "12131232144144234134341434324342131232144144234134341434324342421411"
-      law.tweet.length.should <= 200
+    it "should not over 140 char" do
+      law.tweet.length.should_not > 140
     end
   end
 end

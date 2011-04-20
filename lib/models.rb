@@ -6,7 +6,6 @@ class LawProject
 
   validates_presence_of :pl_id
 
-
   property :id,            Serial
   property :pl_id,         Integer, :unique => true
   property :proposition,   String
@@ -25,11 +24,11 @@ class LawProject
   end
 
   def explication_twittify
-    explication[0, explication_size]
+    explication[0..explication_size]
   end
 
   def explication_size
-    "#{short_url} ... #{proposition}".length-200
+    139-"#{short_url} ... #{proposition}".length
   end
 end
 
