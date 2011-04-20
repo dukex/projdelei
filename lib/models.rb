@@ -6,6 +6,7 @@ class LawProject
 
   validates_presence_of :pl_id
 
+
   property :id,            Serial
   property :pl_id,         Integer, :unique => true
   property :proposition,   String
@@ -14,16 +15,22 @@ class LawProject
   property :was_shared,    Boolean, :default  => false
 
   def tweet
-    url = UrlShortener.shorten(link)
-    "#{url} #{explication_twittify}... #{proposition}"
+    "#{short_url} #{explication_twittify}... #{proposition}"
   end
 
   private
 
-  def explication_twittify
-    explication[0,105]
+  def short_url
+    UrlShortener.shorten(link)
   end
 
+  def explication_twittify
+    explication[0, explication_size]
+  end
+
+  def explication_size
+    "#{short_url} ... #{proposition}".length-200
+  end
 end
 
 DataMapper.auto_upgrade!

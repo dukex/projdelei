@@ -32,12 +32,13 @@ describe LawProject do
       law.tweet.should =~ Regexp.new(law.proposition)
     end
 
-    it "should have 106 char from explication" do
-      law.tweet.should =~ Regexp.new(law.explication[0,105])
-    end
-
     it "should have 3 points(...) " do
       law.tweet.should =~ /\.\.\./
+    end
+
+    it "should not over 200 char" do
+      law.proposition += "12131232144144234134341434324342131232144144234134341434324342421411"
+      law.tweet.length.should <= 200
     end
   end
 end
