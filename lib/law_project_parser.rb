@@ -10,7 +10,7 @@ class LawProjectParser
   private
 
   def self.url
-    "#{URL_BASE}/Prop_Lista.asp?Ano=#{Time.now.year}&Sigla=PL&OrgaoOrigem=todos"
+    "#{URL_BASE}"
   end
 
   def self.data
