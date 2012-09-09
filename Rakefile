@@ -3,7 +3,7 @@ require 'bundler'
 Bundler.require
 
 require 'rake'
-require "rspec/core/rake_task"
+
 require 'metric_fu'
 require 'string'
 require 'scraper'
@@ -17,9 +17,12 @@ Twitter.configure do |c|
   c.oauth_token_secret = ENV['TWITTER_OAUTH_SECRET']
 end
 
-desc "Run all test"
-RSpec::Core::RakeTask.new do |spec|
-  spec.rspec_opts = ['--color']
+unless ENV['enviroment'] == 'production'
+  require "rspec/core/rake_task"
+  desc "Run all test"
+  RSpec::Core::RakeTask.new do |spec|
+    spec.rspec_opts = ['--color']
+  end
 end
 
 namespace :scraper do
