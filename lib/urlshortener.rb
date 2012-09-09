@@ -2,7 +2,6 @@ require 'open-uri'
 
 class UrlShortener
   def self.shorten(url)
-    config = YAML.load_file(File.expand_path("config.yml"))
-    open("http://api.j.mp/v3/shorten?login=#{config['user']}&apiKey=#{config['api_token']}&longUrl=#{url}&format=txt").read
+    open("http://api.j.mp/v3/shorten?login=#{ENV['BITLY_USER']}&apiKey=#{ENV['BITLY_KEY']}&longUrl=#{url}&format=txt").read
   end
 end
