@@ -10,13 +10,11 @@ require 'scraper'
 require 'updater'
 require 'models'
 
-config = YAML.load_file(File.expand_path("config.yml"))
-
 Twitter.configure do |c|
-  c.consumer_key = config['twitter']['consumer_key']
-  c.consumer_secret = config['twitter']['consumer_secret']
-  c.oauth_token = config['twitter']['oauth_token']
-  c.oauth_token_secret = config['twitter']['oauth_token_secret']
+  c.consumer_key = ENV['TWITTER_CONSUMER_KEY']
+  c.consumer_secret = ENV['TWITTER_CONSUMER_SECRET']
+  c.oauth_token = ENV['TWITTER_OAUTH_TOKEN']
+  c.oauth_token_secret = ENV['TWITTER_OAUTH_SECRET']
 end
 
 desc "Run all test"
