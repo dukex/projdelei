@@ -2,7 +2,10 @@ require File.expand_path('spec/spec_helper')
 
 describe Updater do
   before do
-    FakeWeb.register_uri :get, %r|http:\/\/api\.j\.mp\/v3\/shorten*|, :body => "http://j.mp/ola"
+      stub_request(:get, "http://api.j.mp/v3/shorten?apiKey=&format=txt&login=ola&longUrl=http://google.com").
+         with(:headers => {'Accept'=>'*/*', 'User-Agent'=>'Ruby'}).
+         to_return(:status => 200, :body => "", :headers => {})
+
     YAML.stub(:load_file).and_return({'api_token' => "", 'user' => "ola" })
 
     Twitter.stub(:update) { true }
@@ -29,7 +32,4 @@ describe Updater do
       Updater.now
     end
   end
-
-
-
 end

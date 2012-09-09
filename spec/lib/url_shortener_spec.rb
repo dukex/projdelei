@@ -7,7 +7,9 @@ describe UrlShortener do
       api_token = "abc123"
       url = "http://urlmuitolonga.com.br/"
 
-      FakeWeb.register_uri(:get, "http://api.j.mp/v3/shorten?login=#{user}&apiKey=#{api_token}&longUrl=#{url}&format=txt", :body => "http://j.mp/23")
+      stub_request(:get, "http://api.j.mp/v3/shorten?apiKey=abc123&format=txt&login=duke&longUrl=http://urlmuitolonga.com.br/").
+         with(:headers => {'Accept'=>'*/*', 'User-Agent'=>'Ruby'}).
+         to_return(:status => 200, :body => "http://j.mp/23", :headers => {})
       YAML.stub(:load_file) { {'api_token' => api_token, 'user' => user } }
     end
 

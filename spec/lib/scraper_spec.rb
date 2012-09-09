@@ -6,7 +6,9 @@ describe Scraper do
 
   describe "#run!"  do
     before do
-      FakeWeb.register_uri(:get, "http://www.camara.gov.br/sileg/Prop_Lista.asp?Ano=#{Time.now.year}&Sigla=PL&OrgaoOrigem=todos", :body => fixture("list"))
+      stub_request(:get, "http://www.camara.gov.br/SitCamaraWS/Proposicoes.asmx/ListarProposicoes?OrgaoOrigem=todos&Sigla=PL&ano=2012&autor=&codEstado=&codOrgaoEstado=&datApresentacaoFim=&datApresentacaoIni=&emTramitacao=/Prop_Lista.asp?Ano=2012&generoAutor=&numero=&parteNomeAutor=&sigla=PL&siglaPartidoAutor=&siglaUFAutor=").
+         with(:headers => {'Accept'=>'*/*', 'User-Agent'=>'ProjDeLei Bot'}).
+         to_return(:status => 200, :body => fixture("pl_list.xml"))
     end
 
     it "should save 30 register in database" do

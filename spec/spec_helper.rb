@@ -9,15 +9,12 @@ require 'rack/test'
 require 'urlshortener'
 require 'scraper'
 require 'updater'
-require 'fakeweb'
+require 'webmock/rspec'
 require 'factory_girl'
 require 'string'
+require 'pry'
 
-
-path = "spec/support/factories"
-Dir[File.join(path, '*.rb')].sort.each do |file|
-  require file
-end
+Dir[File.join("#{Dir.pwd}/spec/support/**/*.rb")].each {|f| require f}
 
 DataMapper.setup(:default, "sqlite::memory:")
 
