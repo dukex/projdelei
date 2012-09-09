@@ -2,6 +2,10 @@ require 'rubygems'
 require 'bundler'
 Bundler.require
 
+
+lib_dir = File.expand_path('../lib', __FILE__)
+$:.unshift lib_dir unless $:.include?(lib_dir)
+
 require 'rake'
 
 require 'metric_fu'
