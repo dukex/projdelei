@@ -4,7 +4,8 @@ module CamaraDotGov
   end
 
   def fixture(name)
-    File.open("spec/support/fixture/#{name}.html").read
+    ext = name.match("\.") ? "" : ".html"
+    File.open("spec/support/fixture/#{name}#{ext}").read
   end
 end
 

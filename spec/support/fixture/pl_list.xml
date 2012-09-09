@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="utf-8"?>
+<proposicoes>
+  <proposicao>
+    <id>555637</id>
+    <nome>PL 4420/2012</nome>
+    <tipoProposicao>
+      <id>139</id>
+      <sigla>PL</sigla>
+      <nome>Projeto de Lei</nome>
+    </tipoProposicao>
+    <numero>4420</numero>
+    <ano>2012</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>9/6/2012 4:28:14 PM</datApresentacao>
+    <txtEmenta>Institui o Dia Nacional do Orquidófilo.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>99</codRegime>
+      <txtRegime>.</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>99</id>
+      <txtApreciacao>.</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>João Pizzolatti</txtNomeAutor>
+      <codPartido>115</codPartido>
+      <txtSiglaPartido>PP        </txtSiglaPartido>
+      <txtSiglaUF>SC</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>
+      </datDespacho>
+      <txtDespacho>
+      </txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>905</id>
+      <descricao>Aguardando Despacho do Presidente da Câmara dos Deputados</descricao>
+      <orgao>
+        <codOrgaoEstado>SECAP(SGM)</codOrgaoEstado>
+        <siglaOrgaoEstado>SECAP(SGM)</siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>o</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>555620</id>
+    <nome>PL 4419/2012</nome>
+    <tipoProposicao>
+      <id>139</id>
+      <sigla>PL</sigla>
+      <nome>Projeto de Lei</nome>
+    </tipoProposicao>
+    <numero>4419</numero>
+    <ano>2012</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>9/6/2012 2:59:41 PM</datApresentacao>
+    <txtEmenta>Altera a Lei nº 12.351, de 22 de dezembro de 2010, para destinar recursos do Fundo Social para a educação.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>99</codRegime>
+      <txtRegime>.</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>99</id>
+      <txtApreciacao>.</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Jorge Boeira</txtNomeAutor>
+      <codPartido>127</codPartido>
+      <txtSiglaPartido>PSD       </txtSiglaPartido>
+      <txtSiglaUF>SC</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>
+      </datDespacho>
+      <txtDespacho>
+      </txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>905</id>
+      <descricao>Aguardando Despacho do Presidente da Câmara dos Deputados</descricao>
+      <orgao>
+        <codOrgaoEstado>SECAP(SGM)</codOrgaoEstado>
+        <siglaOrgaoEstado>SECAP(SGM)</siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>o</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>555619</id>
+    <nome>PL 4418/2012</nome>
+    <tipoProposicao>
+      <id>139</id>
+      <sigla>PL</sigla>
+      <nome>Projeto de Lei</nome>
+    </tipoProposicao>
+    <numero>4418</numero>
+    <ano>2012</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>9/6/2012 2:49:00 PM</datApresentacao>
+    <txtEmenta>Altera a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para dispor sobre o acesso e a permanência de crianças em locais de diversão e de apresentação ou exibição de espetáculos públicos.</txtEmenta>
+    <txtExplicacaoEmenta>Exige que o menor seja acompanhado dos pais ou responsável.</txtExplicacaoEmenta>
+    <regime>
+      <codRegime>99</codRegime>
+      <txtRegime>.</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>99</id>
+      <txtApreciacao>.</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Senado Federal - Pedro Simon</txtNomeAutor>
+      <codPartido>
+      </codPartido>
+      <txtSiglaPartido>PMDB      </txtSiglaPartido>
+      <txtSiglaUF>RS</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>
+      </datDespacho>
+      <txtDespacho>
+      </txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>905</id>
+      <descricao>Aguardando Despacho do Presidente da Câmara dos Deputados</descricao>
+      <orgao>
+        <codOrgaoEstado>SECAP(SGM)</codOrgaoEstado>
+        <siglaOrgaoEstado>SECAP(SGM)</siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>o</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>555521</id>
+    <nome>PL 4417/2012</nome>
+    <tipoProposicao>
+      <id>139</id>
+      <sigla>PL</sigla>
+      <nome>Projeto de Lei</nome>
+    </tipoProposicao>
+    <numero>4417</numero>
+    <ano>2012</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>9/6/2012 1:14:52 PM</datApresentacao>
+    <txtEmenta>Proíbe o fornecimento de qualquer produto servido em restaurantes, bares e estabelecimentos congêneres sem a prévia solicitação do consumidor.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>99</codRegime>
+      <txtRegime>.</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>99</id>
+      <txtApreciacao>.</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Major Fábio</txtNomeAutor>
+      <codPartido>202</codPartido>
+      <txtSiglaPartido>DEM       </txtSiglaPartido>
+      <txtSiglaUF>PB</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>
+      </datDespacho>
+      <txtDespacho>
+      </txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>905</id>
+      <descricao>Aguardando Despacho do Presidente da Câmara dos Deputados</descricao>
+      <orgao>
+        <codOrgaoEstado>SECAP(SGM)</codOrgaoEstado>
+        <siglaOrgaoEstado>SECAP(SGM)</siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>o</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>555519</id>
+    <nome>PL 4416/2012</nome>
+    <tipoProposicao>
+      <id>139</id>
+      <sigla>PL</sigla>
+      <nome>Projeto de Lei</nome>
+    </tipoProposicao>
+    <numero>4416</numero>
+    <ano>2012</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>9/6/2012 1:13:47 PM</datApresentacao>
+    <txtEmenta>Altera a Lei nº 7.102, de 20 de junho de 1983, proibindo o uso de telefones celulares no interior dos estabelecimentos financeiros e dá outras providências.</txtEmenta>
+    <txtExplicacaoEmenta>Estabelece também a instalação de isolamento físico entre os guichês de atendimento.</txtExplicacaoEmenta>
+    <regime>
+      <codRegime>99</codRegime>
+      <txtRegime>.</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>99</id>
+      <txtApreciacao>.</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Major Fábio</txtNomeAutor>
+      <codPartido>202</codPartido>
+      <txtSiglaPartido>DEM       </txtSiglaPartido>
+      <txtSiglaUF>PB</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>
+      </datDespacho>
+      <txtDespacho>
+      </txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>905</id>
+      <descricao>Aguardando Despacho do Presidente da Câmara dos Deputados</descricao>
+      <orgao>
+        <codOrgaoEstado>SECAP(SGM)</codOrgaoEstado>
+        <siglaOrgaoEstado>SECAP(SGM)</siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>o</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>555422</id>
+    <nome>PL 4415/2012</nome>
+    <tipoProposicao>
+      <id>139</id>
+      <sigla>PL</sigla>
+      <nome>Projeto de Lei</nome>
+    </tipoProposicao>
+    <numero>4415</numero>
+    <ano>2012</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>9/6/2012 11:49:35 AM</datApresentacao>
+    <txtEmenta>Dispõe sobre a garantia de escolaridade às crianças internadas para tratamento de saúde por tempo indeterminado e superior a 90 (noventa) dias. </txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>99</codRegime>
+      <txtRegime>.</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>99</id>
+      <txtApreciacao>.</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Roberto de Lucena</txtNomeAutor>
+      <codPartido>140</codPartido>
+      <txtSiglaPartido>PV        </txtSiglaPartido>
+      <txtSiglaUF>SP</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>
+      </datDespacho>
+      <txtDespacho>
+      </txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>905</id>
+      <descricao>Aguardando Despacho do Presidente da Câmara dos Deputados</descricao>
+      <orgao>
+        <codOrgaoEstado>SECAP(SGM)</codOrgaoEstado>
+        <siglaOrgaoEstado>SECAP(SGM)</siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>o</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>555336</id>
+    <nome>PL 4414/2012</nome>
+    <tipoProposicao>
+      <id>139</id>
+      <sigla>PL</sigla>
+      <nome>Projeto de Lei</nome>
+    </tipoProposicao>
+    <numero>4414</numero>
+    <ano>2012</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>9/6/2012 10:50:18 AM</datApresentacao>
+    <txtEmenta>Modifica a Lei nº 12.232, de 29 de abril de 2010, limitando a natureza e o montante das despesas com contratos de publicidade no âmbito da administração pública.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>99</codRegime>
+      <txtRegime>.</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>99</id>
+      <txtApreciacao>.</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Arthur Oliveira Maia</txtNomeAutor>
+      <codPartido>111</codPartido>
+      <txtSiglaPartido>PMDB      </txtSiglaPartido>
+      <txtSiglaUF>BA</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>
+      </datDespacho>
+      <txtDespacho>
+      </txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>905</id>
+      <descricao>Aguardando Despacho do Presidente da Câmara dos Deputados</descricao>
+      <orgao>
+        <codOrgaoEstado>SECAP(SGM)</codOrgaoEstado>
+        <siglaOrgaoEstado>SECAP(SGM)</siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>o</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>555283</id>
+    <nome>PL 4413/2012</nome>
+    <tipoProposicao>
+      <id>139</id>
+      <sigla>PL</sigla>
+      <nome>Projeto de Lei</nome>
+    </tipoProposicao>
+    <numero>4413</numero>
+    <ano>2012</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>9/5/2012 7:10:51 PM</datApresentacao>
+    <txtEmenta>Acrescenta o art. 31-A à Lei nº 11.340, de 7 de agosto de 2006, que "cria mecanismos para coibir a violência doméstica e familiar contra a mulher, nos termos do § 8º do art. 226 da Constituição Federal, da Convenção sobre a Eliminação de Todas as Formas de Discriminação contra as Mulheres e da Convenção Interamericana para Prevenir, Punir e Erradicar a Violência contra a Mulher; dispõe sobre a criação dos Juizados de Violência Doméstica e Familiar contra a Mulher; altera o Código de Processo Penal, o Código Penal e a Lei de Execução Penal; e dá outras providências".</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>99</codRegime>
+      <txtRegime>.</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>99</id>
+      <txtApreciacao>.</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Otoniel Lima</txtNomeAutor>
+      <codPartido>199</codPartido>
+      <txtSiglaPartido>PRB       </txtSiglaPartido>
+      <txtSiglaUF>SP</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>
+      </datDespacho>
+      <txtDespacho>
+      </txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>905</id>
+      <descricao>Aguardando Despacho do Presidente da Câmara dos Deputados</descricao>
+      <orgao>
+        <codOrgaoEstado>SECAP(SGM)</codOrgaoEstado>
+        <siglaOrgaoEstado>SECAP(SGM)</siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>o</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>555279</id>
+    <nome>PL 4412/2012</nome>
+    <tipoProposicao>
+      <id>139</id>
+      <sigla>PL</sigla>
+      <nome>Projeto de Lei</nome>
+    </tipoProposicao>
+    <numero>4412</numero>
+    <ano>2012</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>9/5/2012 7:04:38 PM</datApresentacao>
+    <txtEmenta>Altera a Lei nº 7.802, de 11 de julho de 1989, para banir os agrotóxicos e componentes que especifica, e dá outras providências. </txtEmenta>
+    <txtExplicacaoEmenta>Produtos que tenham como ingrediente ativo: abamectina, acefato, benomil, carbofurano, cihexatina, endossulfam, forato, fosmete, heptacloro, lactofem, lindano, metamidofós, monocrotofós, paraquate, parationa metílica, pentaclorofenol, tiram, triclorfom, e qualquer substância compreendida no grupo químico dos organoclorados. Prazo reavaliação agrotóxicos que tenham glifosato.</txtExplicacaoEmenta>
+    <regime>
+      <codRegime>99</codRegime>
+      <txtRegime>.</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>99</id>
+      <txtApreciacao>.</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Paulo Teixeira</txtNomeAutor>
+      <codPartido>134</codPartido>
+      <txtSiglaPartido>PT        </txtSiglaPartido>
+      <txtSiglaUF>SP</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>
+      </datDespacho>
+      <txtDespacho>
+      </txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>905</id>
+      <descricao>Aguardando Despacho do Presidente da Câmara dos Deputados</descricao>
+      <orgao>
+        <codOrgaoEstado>SECAP(SGM)</codOrgaoEstado>
+        <siglaOrgaoEstado>SECAP(SGM)</siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>o</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>555272</id>
+    <nome>PL 4411/2012</nome>
+    <tipoProposicao>
+      <id>139</id>
+      <sigla>PL</sigla>
+      <nome>Projeto de Lei</nome>
+    </tipoProposicao>
+    <numero>4411</numero>
+    <ano>2012</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>9/5/2012 6:44:16 PM</datApresentacao>
+    <txtEmenta>Dá nova redação os dispositivos da Lei nº 8.010, de 29 de março de 1990 que dispõe sobre importações de bens destinados à pesquisa científica e tecnológica , e dá outras providências.  </txtEmenta>
+    <txtExplicacaoEmenta>Propõe a eliminação da burocracia de importação de mercadorias destinadas à pesquisa científica e tecnológica através da criação, pelo CNPq, de um cadastro nacional de pesquisadores que teriam liberação imediata das mercadorias a eles destinadas.  </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>99</codRegime>
+      <txtRegime>.</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>99</id>
+      <txtApreciacao>.</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Romário</txtNomeAutor>
+      <codPartido>125</codPartido>
+      <txtSiglaPartido>PSB       </txtSiglaPartido>
+      <txtSiglaUF>RJ</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>
+      </datDespacho>
+      <txtDespacho>
+      </txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>905</id>
+      <descricao>Aguardando Despacho do Presidente da Câmara dos Deputados</descricao>
+      <orgao>
+        <codOrgaoEstado>SECAP(SGM)</codOrgaoEstado>
+        <siglaOrgaoEstado>SECAP(SGM)</siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>o</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>555264</id>
+    <nome>PL 4410/2012</nome>
+    <tipoProposicao>
+      <id>139</id>
+      <sigla>PL</sigla>
+      <nome>Projeto de Lei</nome>
+    </tipoProposicao>
+    <numero>4410</numero>
+    <ano>2012</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>9/5/2012 6:31:08 PM</datApresentacao>
+    <txtEmenta>Dispõe sobre a obrigatoriedade de confecção de carteiras de identidade para os recém-nascidos, em todo território nacional, pelos Cartórios de Registro Civil e dá outras providências.                                                                                                                                                                                                                                                                                                                                                                                                              </txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>99</codRegime>
+      <txtRegime>.</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>99</id>
+      <txtApreciacao>.</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Onofre Santo Agostini</txtNomeAutor>
+      <codPartido>127</codPartido>
+      <txtSiglaPartido>PSD       </txtSiglaPartido>
+      <txtSiglaUF>SC</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>
+      </datDespacho>
+      <txtDespacho>
+      </txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>905</id>
+      <descricao>Aguardando Despacho do Presidente da Câmara dos Deputados</descricao>
+      <orgao>
+        <codOrgaoEstado>SECAP(SGM)</codOrgaoEstado>
+        <siglaOrgaoEstado>SECAP(SGM)</siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>o</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>555250</id>
+    <nome>PL 4409/2012</nome>
+    <tipoProposicao>
+      <id>139</id>
+      <sigla>PL</sigla>
+      <nome>Projeto de Lei</nome>
+    </tipoProposicao>
+    <numero>4409</numero>
+    <ano>2012</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>9/5/2012 6:12:16 PM</datApresentacao>
+    <txtEmenta>Altera a Lei nº 12.305, de 2 de agosto de 2010.</txtEmenta>
+    <txtExplicacaoEmenta>Obriga o fabricante informar na própria embalagem sobre o descarte do produto.</txtExplicacaoEmenta>
+    <regime>
+      <codRegime>99</codRegime>
+      <txtRegime>.</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>99</id>
+      <txtApreciacao>.</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Laercio Oliveira</txtNomeAutor>
+      <codPartido>168</codPartido>
+      <txtSiglaPartido>PR        </txtSiglaPartido>
+      <txtSiglaUF>SE</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>
+      </datDespacho>
+      <txtDespacho>
+      </txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>905</id>
+      <descricao>Aguardando Despacho do Presidente da Câmara dos Deputados</descricao>
+      <orgao>
+        <codOrgaoEstado>SECAP(SGM)</codOrgaoEstado>
+        <siglaOrgaoEstado>SECAP(SGM)</siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>o</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>555248</id>
+    <nome>PL 4408/2012</nome>
+    <tipoProposicao>
+      <id>139</id>
+      <sigla>PL</sigla>
+      <nome>Projeto de Lei</nome>
+    </tipoProposicao>
+    <numero>4408</numero>
+    <ano>2012</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>9/5/2012 6:11:18 PM</datApresentacao>
+    <txtEmenta>Altera a Lei nº 9.503, de 23 de setembro de 1997.</txtEmenta>
+    <txtExplicacaoEmenta>Aumenta a multa  para o motorista que dirigir alcoolizado.</txtExplicacaoEmenta>
+    <regime>
+      <codRegime>99</codRegime>
+      <txtRegime>.</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>99</id>
+      <txtApreciacao>.</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Laercio Oliveira</txtNomeAutor>
+      <codPartido>168</codPartido>
+      <txtSiglaPartido>PR        </txtSiglaPartido>
+      <txtSiglaUF>SE</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>
+      </datDespacho>
+      <txtDespacho>
+      </txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>905</id>
+      <descricao>Aguardando Despacho do Presidente da Câmara dos Deputados</descricao>
+      <orgao>
+        <codOrgaoEstado>SECAP(SGM)</codOrgaoEstado>
+        <siglaOrgaoEstado>SECAP(SGM)</siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>o</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+  <proposicao>
+    <id>555247</id>
+    <nome>PL 4407/2012</nome>
+    <tipoProposicao>
+      <id>139</id>
+      <sigla>PL</sigla>
+      <nome>Projeto de Lei</nome>
+    </tipoProposicao>
+    <numero>4407</numero>
+    <ano>2012</ano>
+    <orgaoNumerador>
+      <id>180</id>
+      <sigla>PLEN      </sigla>
+      <nome>PLENÁRIO</nome>
+    </orgaoNumerador>
+    <datApresentacao>9/5/2012 6:10:36 PM</datApresentacao>
+    <txtEmenta>Institui o Serviço Social Obrigatório.</txtEmenta>
+    <txtExplicacaoEmenta>
+    </txtExplicacaoEmenta>
+    <regime>
+      <codRegime>99</codRegime>
+      <txtRegime>.</txtRegime>
+    </regime>
+    <apreciacao>
+      <id>99</id>
+      <txtApreciacao>.</txtApreciacao>
+    </apreciacao>
+    <autor1>
+      <txtNomeAutor>Laercio Oliveira</txtNomeAutor>
+      <codPartido>168</codPartido>
+      <txtSiglaPartido>PR        </txtSiglaPartido>
+      <txtSiglaUF>SE</txtSiglaUF>
+    </autor1>
+    <qtdAutores>1</qtdAutores>
+    <ultimoDespacho>
+      <datDespacho>
+      </datDespacho>
+      <txtDespacho>
+      </txtDespacho>
+    </ultimoDespacho>
+    <situacao>
+      <id>905</id>
+      <descricao>Aguardando Despacho do Presidente da Câmara dos Deputados</descricao>
+      <orgao>
+        <codOrgaoEstado>SECAP(SGM)</codOrgaoEstado>
+        <siglaOrgaoEstado>SECAP(SGM)</siglaOrgaoEstado>
+      </orgao>
+      <principal>
+        <codProposicaoPrincipal>0</codProposicaoPrincipal>
+        <proposicaoPrincipal>
+        </proposicaoPrincipal>
+      </principal>
+    </situacao>
+    <indGenero>o</indGenero>
+    <qtdOrgaosComEstado>1</qtdOrgaosComEstado>
+  </proposicao>
+</proposicoes>

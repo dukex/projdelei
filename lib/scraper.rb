@@ -1,3 +1,5 @@
+#encoding: utf-8
+
 require 'law_project_parser'
 require 'models'
 
