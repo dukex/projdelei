@@ -2,12 +2,12 @@ require File.expand_path('spec/spec_helper')
 
 describe Updater do
   before do
-      stub_request(:get, "http://api.j.mp/v3/shorten?apiKey=&format=txt&login=ola&longUrl=http://google.com").
+      stub_request(:get, "http://api.j.mp/v3/shorten?apiKey=abc123&format=txt&login=ola&longUrl=http://google.com").
          with(:headers => {'Accept'=>'*/*', 'User-Agent'=>'Ruby'}).
          to_return(:status => 200, :body => "", :headers => {})
 
-    YAML.stub(:load_file).and_return({'api_token' => "", 'user' => "ola" })
-
+    ENV['BITLY_USER'] = "ola"
+    ENV['BITLY_KEY'] = "abc123"
     Twitter.stub(:update) { true }
   end
 

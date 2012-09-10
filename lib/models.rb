@@ -20,7 +20,7 @@ class LawProject
   private
 
   def short_url
-    UrlShortener.shorten(link)
+    @short_url ||= UrlShortener.shorten(link)
   end
 
   def explication_twittify
