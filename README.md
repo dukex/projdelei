@@ -5,5 +5,4 @@ Projdelei é uma conta do twitter que avisara em tempo real quando um projeto no
 
 Continuous Integration
 ----------------------
-[![Build Status](http://travis-ci.org/emersonvinicius/projdelei.png)](http://travis-ci.org/emersonvinicius/projdelei)
-
+[![Build Status](https://secure.travis-ci.org/dukex/projdelei.png)](http://travis-ci.org/dukex/projdelei)
