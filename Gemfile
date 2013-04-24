@@ -1,4 +1,4 @@
-source :rubygems
+source 'https://rubygems.org'
 
 gem 'haml'
 gem "nokogiri"
@@ -8,6 +8,7 @@ gem 'dm-validations', '>= 1.1.0'
 gem 'metric_fu'
 gem 'twitter', '>= 1.3.0'
 gem 'dm-postgres-adapter', '>= 1.1.0'
+gem 'grape'
 
 group :test, :development do
   gem 'rspec', '>= 2.0'
