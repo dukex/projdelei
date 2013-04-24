@@ -8,7 +8,8 @@ describe Scraper do
 
   describe "#run!"  do
     before do
-      stub_request(:get, "http://www.camara.gov.br/SitCamaraWS/Proposicoes.asmx/ListarProposicoes?ano=2012&autor=&codEstado=&codOrgaoEstado=&datApresentacaoFim=&datApresentacaoIni=&emTramitacao=&generoAutor=&numero=&parteNomeAutor=&sigla=PL&siglaPartidoAutor=&siglaUFAutor=").
+
+      stub_request(:get, "http://www.camara.gov.br/SitCamaraWS/Proposicoes.asmx/ListarProposicoes?ano=2013&autor=&codEstado=&codOrgaoEstado=&datApresentacaoFim=&datApresentacaoIni=&emTramitacao=&generoAutor=&numero=&parteNomeAutor=&sigla=PL&siglaPartidoAutor=&siglaUFAutor=").
          with(:headers => {'Accept'=>'*/*', 'User-Agent'=>'ProjDeLei Bot'}).
          to_return(:status => 200, :body => fixture("pl_list.xml"))
     end
