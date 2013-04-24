@@ -16,6 +16,11 @@ module ProjDeLei
         @laws = LawProject.all(order: [ :id.desc ])
         @laws.to_json(exclude: [:id, :was_shared])
       end
+
+      get ':id' do
+        @law = LawProject.all(pl_id: params[:id]).first
+        @law.to_json(exclude: [:id, :was_shared])
+      end
     end
   end
 end
