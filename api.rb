@@ -9,5 +9,13 @@ require 'grape_hack'
 
 module ProjDeLei
   class API < Grape::API
+    format :json
+
+    resource :laws do
+      get do
+        @laws = LawProject.all(order: [ :id.desc ])
+        @laws.to_json(exclude: [:id, :was_shared])
+      end
+    end
   end
 end
