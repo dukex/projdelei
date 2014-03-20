@@ -14,6 +14,7 @@ class LawProject
   property :was_shared,    Boolean, :default  => false
 
   def tweet
+    puts "#{short_url} #{explication_twittify}... #{proposition}"
     "#{short_url} #{explication_twittify}... #{proposition}"
   end
 
