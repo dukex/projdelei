@@ -1,5 +1,7 @@
 #!/bin/sh
 
+gem install t
+
 t leaders | xargs t unfollow
 t leaders | xargs t unfollow
 t leaders | xargs t unfollow
