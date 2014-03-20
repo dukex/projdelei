@@ -28,7 +28,7 @@ class LawProject
   end
 
   def explication_size
-    135-"... #{proposition}".length
+    135-"#{short_url} ... #{proposition}".length
   end
 end
 
