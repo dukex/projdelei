@@ -39,7 +39,7 @@ namespace :scraper do
   end
 end
 
-namespace :twitter do
+namespace :social do
   desc "Updated Twitter account"
   task :update do
     Updater.now

@@ -18,6 +18,10 @@ class LawProject
     "#{short_url} #{explication_twittify}... #{proposition}"
   end
 
+  def facebook_status
+    "#{proposition}\n\n #{explication}\n\n #{short_url}"
+  end
+
   private
 
   def short_url
