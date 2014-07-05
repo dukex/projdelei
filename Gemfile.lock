@@ -90,6 +90,10 @@ GEM
     json (1.4.6)
     json (1.4.6-java)
     json_pure (1.4.6)
+    koala (1.10.0rc2)
+      addressable
+      faraday
+      multi_json
     main (4.4.0)
       arrayfields (>= 4.7.4)
       fattr (>= 2.1.0)
@@ -191,6 +195,7 @@ DEPENDENCIES
   factory_girl
   grape
   haml
+  koala (~> 1.10.0rc)
   metric_fu
   nokogiri
   pry

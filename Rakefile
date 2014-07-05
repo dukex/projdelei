@@ -21,6 +21,9 @@ Twitter.configure do |c|
   c.oauth_token_secret = ENV['TWITTER_OAUTH_SECRET']
 end
 
+FACEBOOK = Koala::Facebook::API.new(ENV['FACEBOOK_ACCESS_TOKEN'])
+FACEBOOK_PAGE_ID = ENV['FACEBOOK_PAGE_ID']
+
 unless ENV['enviroment'] == 'production'
   require "rspec/core/rake_task"
   desc "Run all test"
