@@ -8,7 +8,6 @@ gem 'dm-validations', '>= 1.1.0'
 gem 'dm-serializer'
 gem 'metric_fu'
 gem 'twitter', '>= 1.3.0'
-gem 'dm-postgres-adapter', '>= 1.1.0'
 gem 'grape'
 gem 'koala', '~> 1.10.0rc'
 
@@ -22,3 +21,6 @@ group :test, :development do
   gem 'shotgun'
 end
 
+group :production do
+  gem 'dm-postgres-adapter', '>= 1.1.0'
+end
