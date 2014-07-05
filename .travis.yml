@@ -1,1 +1,3 @@
 script: "bundle exec rspec spec"
+addons:
+  postgresql: "9.3"
